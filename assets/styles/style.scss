@@ -1,0 +1,132 @@
+/*
+Theme Name: PhysikOnline - MaterialDesign
+Theme URI: https://wordpress.org/themes/twentyseventeen/
+Author: PhysikOnline-Team
+Author URI: http://physikonline.uni-frankfurt.de/
+Description: Material-Design Template developed Twenty Seventeen brings your site to life with header video and immersive featured images. With a focus on business sites, it features multiple sections on the front page as well as widgets, navigation and social menus, a logo, and more. Personalize its asymmetrical grid with a custom color scheme and showcase your multimedia content with post formats. Our default theme for 2017 works great in many languages, for any abilities, and on any device.
+Version: 0.1
+Text Domain: materialdesign
+Tags: physikonline, materialdesign
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 Normalize
+2.0 Accessibility
+3.0 Alignments
+4.0 Clearings
+5.0 Typography
+6.0 Forms
+7.0 Formatting
+8.0 Lists
+9.0 Tables
+10.0 Links
+11.0 Featured Image Hover
+12.0 Navigation
+13.0 Layout
+   13.1 Header
+   13.2 Front Page
+   13.3 Regular Content
+   13.4 Posts
+   13.5 Pages
+   13.6 Footer
+14.0 Comments
+15.0 Widgets
+16.0 Media
+   16.1 Galleries
+17.0 Customizer
+18.0 SVGs Fallbacks
+19.0 Media Queries
+20.0 Print
+--------------------------------------------------------------*/
+
+@import 'materialize';
+
+/*--------------------------------------------------------------
+>>> 12.0 Navigation:
+----------------------------------------------------------------*/
+
+/*
+ * 12.1 Sidenav
+ */
+#slide-out {
+  background-color: $secondary-color;
+  box-shadow: 8px 0px 24px 2px rgba(0,0,0,0.14);
+  // box-shadow: 4px 0 24px 2px rgba(0, 0, 0, 0.28),
+  //   6px 0 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
+
+  .collection-header {
+    margin: 1.1rem 0 1.1rem 0;
+    display: block;
+    color: $primary-color;
+    padding-left: 35px;
+    i {
+      font-size: 1.64rem;
+      vertical-align: top;
+      margin-right: 20px;
+    }
+  }
+
+  &.collection {
+    border: 0 none;
+    .collection-item {
+      color: $primary-color;
+      background-color: transparent;
+      border-bottom: 0px solid transparent;
+      padding: 20px 30px;
+      line-height: 25px;
+      &.active,
+      &:hover {
+        background-color: $primary-color;
+        color: $secondary-color;
+      }
+      i {
+        margin-right: 25px;
+      }
+    }
+  }
+}
+
+.collection.with-header {
+  color: #f00;
+  .collection-header {
+    background-color: transparent;
+    border-bottom: 0 none;
+  }
+}
+
+/*
+ * 12.2 Main-Nav
+ */
+nav {
+  box-shadow: 0px 8px 24px 2px rgba(0,0,0,0.14);
+  ul {
+    a {
+      color: $third-color;
+      &.active {
+          background-color: rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+}
+
+/*--------------------------------------------------------------
+>>> 13.0 Layout:
+----------------------------------------------------------------*/
+
+header,
+main,
+nav,
+footer {
+  padding-left: 300px;
+}
+
+@media only screen and (max-width: 992px) {
+  header,
+  main,
+  nav,
+  footer {
+    padding-left: 0;
+  }
+}
