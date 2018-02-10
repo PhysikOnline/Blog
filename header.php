@@ -15,8 +15,8 @@
 
 <div id="slide-out" class=" collection side-nav fixed with-header">
   <a href="/wordpress" class="collection-header"><h5>PhysikOnline Blog</h5></a>
-  <a href="#!" class="collection-item waves-effect"><i class="material-icons left">weekend</i>Fachschaft Physik</a>
-  <a href="#!" class="collection-item waves-effect active"><i class="material-icons left">code</i>PhysikOnline</a>
+  <a href="/wordpress/category/fs-physik/" class="collection-item waves-effect"><i class="material-icons left">weekend</i>Fachschaft Physik</a>
+  <a href="/wordpress/category/physikonline/" class="collection-item waves-effect active"><i class="material-icons left">code</i>PhysikOnline</a>
   <a href="#!" class="collection-item waves-effect"><i class="material-icons left">live_tv</i>RiedbergTV</a>
 </div>
 
