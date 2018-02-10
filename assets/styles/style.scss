@@ -52,7 +52,7 @@ Tags: physikonline, materialdesign
  */
 #slide-out {
   background-color: $secondary-color;
-  box-shadow: 8px 0px 24px 2px rgba(0,0,0,0.14);
+  box-shadow: 8px 0px 24px 2px rgba(0, 0, 0, 0.14);
   // box-shadow: 4px 0 24px 2px rgba(0, 0, 0, 0.28),
   //   6px 0 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
 
@@ -100,12 +100,17 @@ Tags: physikonline, materialdesign
  * 12.2 Main-Nav
  */
 nav {
-  box-shadow: 0px 8px 24px 2px rgba(0,0,0,0.14);
+  a.button-collapse {
+    i {
+      color: $third-color;
+    }
+  }
+  box-shadow: 0px 8px 24px 2px rgba(0, 0, 0, 0.14);
   ul {
     a {
       color: $third-color;
       &.active {
-          background-color: rgba(0, 0, 0, 0.1);
+        background-color: rgba(0, 0, 0, 0.1);
       }
     }
   }
@@ -116,17 +121,53 @@ nav {
 ----------------------------------------------------------------*/
 
 header,
-main,
 nav,
 footer {
   padding-left: 300px;
 }
 
+footer.page-footer {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 30px 30px 30px 330px;
+  &.page-footer .footer-copyright {
+    color: $third-color;
+    background-color: transparent;
+  }
+}
+main {
+  padding: 30px 30px 30px 330px;
+}
+
 @media only screen and (max-width: 992px) {
   header,
-  main,
   nav,
   footer {
     padding-left: 0;
+  }
+
+  main {
+    padding: 10px 0px 10px 0px;
+  }
+}
+
+/*--------------------------------------------------------------
+>>> 13.4 Posts:
+----------------------------------------------------------------*/
+main {
+  // background-color: $primary-color;
+  .card {
+    box-shadow: 0px 0px 24px 2px rgba(0, 0, 0, 0.24);
+    border-radius: 3px;
+    margin-bottom: 0;
+    margin-top: 0.75rem;
+  }
+  .card .card-image img {
+    border-radius: 3px 3px 0 0;
+  }
+  .card .card-action:last-child{
+    border-radius: 0 0 3px 3px;
+  }
+  .card .card-content .card-title {
+    margin: 15px 0 25px 0;
   }
 }

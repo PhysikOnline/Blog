@@ -2,17 +2,78 @@
 get_header();
 ?>
 
- <!--MAIN-->       
+<!-- START:menus -->
+<div id="slide-out" class=" collection side-nav fixed with-header">
+  <a href="/wordpress" class="collection-header"><h5>Fachschaft Physik</h5></a>
+  <a href="/wordpress/category/fs-physik/" class="collection-item waves-effect active"><i class="material-icons left">weekend</i>Fachschaft Physik</a>
+  <a href="/wordpress/category/physikonline/" class="collection-item waves-effect"><i class="material-icons left">code</i>PhysikOnline</a>
+  <a href="https://riedberg.tv" class="collection-item waves-effect"><i class="material-icons left">live_tv</i>RiedbergTV</a>
+</div>
+
+<nav>
+  <div class="nav-wrapper">
+  <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+    <ul>
+      <li><a href="#!"><i class="material-icons left hide-on-small-only">event</i>Veranstaltungen</a></li>
+      <li><a href="#!" class="active"><i class="material-icons left hide-on-small-only">message</i>Blog</a></li>
+      <li><a href="#!"><i class="material-icons left hide-on-small-only">people</i>About</a></li>
+      <li><a href="#!"><i class="material-icons left hide-on-small-only">contact_mail</i>Contact</a></li>
+    </ul>
+  </div>
+</nav>
+<!-- END:menus-->
+
+<!--MAIN-->       
 <main>
-<h1>Fachschaft Physik</h1>
-<p>
-<?php 
-$post = get_posts( ["category" => 4] );
-// print_r($post[0]);
-print_r($post[0]->post_date . '<br>');
-print_r($post[0]->post_title . '<br>');
-print_r($post[0]->post_content . '<hr>');
-?></p>
+    <div class="row">
+
+<?php
+if ( have_posts() ) : while ( have_posts() ) : the_post();
+
+    if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+?>
+    
+        <div class="col s12 m6">
+            <div class="card">
+                <div class="card-image">
+                    <img src="<?php the_post_thumbnail_url( array(520, 390)); ?>">
+                </div>
+                <div class="card-content">
+                <span class="card-title with-image"><?php the_title(); ?></span>
+                    <p><?php the_excerpt(); ?></p>
+                </div>
+                <div class="card-action right-align">
+                    <span><i class="material-icons left">access_time</i><?php the_date(); ?></span>
+                </div>
+            </div>
+        </div>
+
+<?php
+    }
+    else {
+?>
+       
+        <div class="col s12 m6">
+            <div class="card">
+                <div class="card-content">
+                    <span class="card-title"><?php the_title(); ?></span>
+                    <p><?php the_excerpt(); ?></p>
+                </div>
+                <div class="card-action">
+                    <span><i class="material-icons left">access_time</i><?php the_time(); ?></span>
+                </div>
+            </div>
+        </div>
+    
+<?php
+}
+endwhile;
+else :
+    _e( 'Sorry, no posts matched your criteria.', 'textdomain' );
+endif;
+?>
+        </div>
+    </div>
 </main>
 
 
