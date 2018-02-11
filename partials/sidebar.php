@@ -13,6 +13,10 @@ elseif ($category == 'fs')
   $is_po_active = '';
   $is_fs_active = 'active';
 }
+else
+{
+  $title = 'PhysikOnline';
+}
 ?>
 <div id="slide-out" class=" collection side-nav fixed with-header">
   <a href="/wordpress" class="collection-header"><h5><?php echo $title; ?></h5></a>
