@@ -5,7 +5,7 @@ set_query_var( 'view-page', 'blog' );
 get_template_part('partials/sidebar');
 get_template_part('partials/navheader');
 
- ?>
+?>
 
 <main>
     <div class="row">
@@ -22,15 +22,15 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
                 <img src="<?php the_post_thumbnail_url( array(520, 390)); ?>">
             </div>
             <div class="card-content">
-            <span class="card-title with-image"><?php the_title(); ?>(<?php the_ID(); ?>)</span>
+            <span class="card-title with-image"><?php the_title(); ?></span>
                 <p><?php the_content(); ?></p>
             </div>
             <div class="card-action">
                 <span><i class="material-icons left">access_time</i><?php the_date('d.m.Y'); ?></span>
             </div>
         </div>
-        <span><?php previous_post_link(); ?></span><br>
-        <span><?php next_post_link(); ?></span>
+        <span><?php previous_post_link("%link", "%title", true); ?></span><br>
+        <span><?php next_post_link("%link", "%title", true); ?></span>
     </div>
 
 <?php

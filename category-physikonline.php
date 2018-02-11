@@ -27,7 +27,6 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
                     <p><?php the_excerpt(); ?></p>
                 </div>
                 <div class="card-action">
-                <span><?php echo the_shortlink(); ?></span>
                 <span><i class="material-icons left">access_time</i><?php the_time(); ?></span>
                 </div>
             </div>
