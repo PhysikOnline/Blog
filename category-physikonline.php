@@ -17,6 +17,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 ?>
     
         <div class="col s12 m6">
+            <a href="<?php bloginfo('wpurl'); ?>/?p=<?php the_ID(); ?>">
             <div class="card">
                 <div class="card-image">
                     <img src="<?php the_post_thumbnail_url( array(520, 390)); ?>">
@@ -26,11 +27,11 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
                     <p><?php the_excerpt(); ?></p>
                 </div>
                 <div class="card-action">
-                <a href=""></a>
-                <span><?php the_shortlink(); ?></span>
+                <span><?php echo the_shortlink(); ?></span>
                 <span><i class="material-icons left">access_time</i><?php the_time(); ?></span>
                 </div>
             </div>
+            </a>
         </div>
 
 <?php
@@ -39,6 +40,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 ?>
        
         <div class="col s12 m6">
+            <a href="<?php bloginfo('wpurl'); ?>/?p=<?php the_ID(); ?>">
             <div class="card">
                 <div class="card-content">
                     <span class="card-title"><?php the_title(); ?></span>
@@ -48,6 +50,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
                     <span><i class="material-icons left">access_time</i><?php the_time(); ?></span>
                 </div>
             </div>
+            </a>
         </div>
     
 <?php
