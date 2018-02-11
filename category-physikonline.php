@@ -22,10 +22,12 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
                     <img src="<?php the_post_thumbnail_url( array(520, 390)); ?>">
                 </div>
                 <div class="card-content">
-                <span class="card-title with-image"><?php the_title(); ?></span>
+                <span class="card-title with-image"><?php the_title(); ?>(<?php the_ID(); ?>)</span>
                     <p><?php the_excerpt(); ?></p>
                 </div>
                 <div class="card-action">
+                <a href=""></a>
+                <span><?php the_shortlink(); ?></span>
                 <span><i class="material-icons left">access_time</i><?php the_time(); ?></span>
                 </div>
             </div>
