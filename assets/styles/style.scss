@@ -159,10 +159,11 @@ main {
 ----------------------------------------------------------------*/
 main {
   a {
-    color: rgba(0, 0, 0, 0.87);
+    color: $third-color;
   }
   // background-color: $primary-color;
   .card {
+    color: $third-color;
     box-shadow: 0 4px 8px rgba(0,0,0,.1);
     border-radius: 8px;
     margin-bottom: 0;
