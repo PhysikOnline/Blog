@@ -41,7 +41,7 @@ Tags: physikonline, materialdesign
 20.0 Print
 --------------------------------------------------------------*/
 
-@import 'materialize';
+@import "materialize";
 
 /*--------------------------------------------------------------
 >>> 12.0 Navigation:
@@ -88,6 +88,12 @@ Tags: physikonline, materialdesign
   }
 }
 
+@media #{$medium-and-down} {
+  #slide-out {
+    box-shadow: none;
+  }
+}
+
 .collection.with-header {
   color: #fff;
   .collection-header {
@@ -96,9 +102,9 @@ Tags: physikonline, materialdesign
   }
 }
 
-.sub-collapsible li .collapsible-header, 
+.sub-collapsible li .collapsible-header,
 #slide-out.collection .sub-collapsible li .collapsible-header.collection-item,
-.collection.body{
+.collection.body {
   color: rgba(0, 0, 0, 0.54);
 }
 
@@ -137,7 +143,7 @@ footer {
 }
 
 footer.page-footer {
-  background-color:color('po-md', 'dark');
+  background-color: color("po-md", "dark");
   padding: 30px 30px 30px 330px;
   &.page-footer .footer-copyright {
     color: $third-color;
@@ -170,7 +176,7 @@ main {
   // background-color: $primary-color;
   .card {
     color: $third-color;
-    box-shadow: 0 4px 8px rgba(0,0,0,.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     margin-bottom: 0;
     margin-top: 0.75rem;
@@ -178,7 +184,7 @@ main {
   .card .card-image img {
     border-radius: 8px 8px 0 0;
   }
-  .card .card-action:last-child{
+  .card .card-action:last-child {
     border-radius: 0 0 8px 8px;
   }
   .card .card-content .card-title {
