@@ -5,7 +5,7 @@ Author: PhysikOnline-Team
 Author URI: http://physikonline.uni-frankfurt.de/
 Description: Material-Design Template developed Twenty Seventeen brings your site to life with header video and immersive featured images. With a focus on business sites, it features multiple sections on the front page as well as widgets, navigation and social menus, a logo, and more. Personalize its asymmetrical grid with a custom color scheme and showcase your multimedia content with post formats. Our default theme for 2017 works great in many languages, for any abilities, and on any device.
 Version: 0.1
-Text Domain: materialdesign
+Text Domain: po-md
 Tags: physikonline, materialdesign
 */
 /*--------------------------------------------------------------
@@ -6963,10 +6963,15 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
         margin-right: 25px; }
 
 .collection.with-header {
-  color: #f00; }
+  color: #fff; }
   .collection.with-header .collection-header {
     background-color: transparent;
     border-bottom: 0 none; }
+
+.sub-collapsible li .collapsible-header,
+#slide-out.collection .sub-collapsible li .collapsible-header.collection-item,
+.collection.body {
+  color: rgba(0, 0, 0, 0.54); }
 
 /*
  * 12.2 Main-Nav

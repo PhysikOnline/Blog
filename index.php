@@ -18,7 +18,7 @@ get_template_part('partials/navheader');
 
 
 
-<!-- FOOTER --> 
+<!-- FOOTER 
  <footer class="page-footer">
     <div class="footer-copyright">  
         <div class="footainer">
@@ -28,6 +28,6 @@ get_template_part('partials/navheader');
             </ul>
         </div>
     </div>
-</footer>        
+</footer>         -->
 
 <?php get_footer(); ?>
