@@ -21,7 +21,7 @@ if ($category == 'po') {
           <div class="collapsible-body"><span>
           <ul class="sub-collapsible collapsible" data-collapsible="accordion">
             <li>
-              <div class="collapsible-header"><i class="material-icons">info</i>Informationen</div>
+              <div class="collapsible-header"><i class="material-icons">info</i>Informationen</div>d
               <div class="collapsible-body">
                 <ul>
                   <li><a href="#"><i class="material-icons">face</i>Erstsemester</a></li>
