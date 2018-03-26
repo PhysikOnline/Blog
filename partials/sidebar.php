@@ -21,7 +21,9 @@ if ($category == 'po') {
           <div class="collapsible-body"><span>
           <ul class="sub-collapsible collapsible" data-collapsible="accordion">
             <li>
-              <div class="collapsible-header"><i class="material-icons">info</i>Informationen</div>
+              <div class="collapsible-header collection-item"><i class="material-icons">info</i>Informationen 
+              <a href="#" class="secondary-content" style="padding-left: 44.5px;"><i class="material-icons">keyboard_arrow_down</i></a>
+              </div>
               <div class="collapsible-body">
                 <ul>
                   <li><a href="#"><i class="material-icons">face</i>Erstsemester</a></li>
@@ -35,7 +37,7 @@ if ($category == 'po') {
             <li>
               <div class="collapsible-header collection-item">
                 <i class="material-icons">event</i>Veranstaltungen
-                <a href="#" class="secondary-content"><i class="material-icons">event</i></a>
+                <a href="#" class="secondary-content"><i class="material-icons">keyboard_arrow_down</i></a>
               </div>
               <div class="collapsible-body">
                 <ul>

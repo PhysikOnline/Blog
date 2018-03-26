@@ -17,6 +17,10 @@ $po-md: (
     "dark": #424242
 );
 
+$fs: (
+  "orange": #ff9800,
+);
+
 $materialize-red: (
   "base":       #e51c23,
   "lighten-5":  #fdeaeb,
@@ -350,6 +354,7 @@ $shades: (
 $colors: (
   "materialize-red": $materialize-red,
   "po-md": $po-md,
+  "fs": $fs,
   "red": $red,
   "pink": $pink,
   "purple": $purple,
