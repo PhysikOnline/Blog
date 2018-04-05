@@ -88,6 +88,11 @@ Tags: physikonline, materialdesign
   }
 }
 
+.sublist-padding {
+  padding-top: 13px !important;
+  padding-bottom: 3px !important;
+}
+
 @media #{$medium-and-down} {
   #slide-out {
     box-shadow: none;
