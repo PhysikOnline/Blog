@@ -10,7 +10,7 @@ get_template_part('partials/navheader');
 <main>
 <div class="row">
         <div class="col s12 m6">
-           <h1>Projectvorstellungen</h1>
+           <h1>Projektvorstellungen</h1>
         </div>
     </div>
 </main>
