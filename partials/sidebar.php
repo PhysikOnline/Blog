@@ -10,7 +10,9 @@ if ($category == 'po') {
     $is_po_active = '';
     $is_fs_active = 'active';
 } else {
-    $title = 'PhysikOnline';
+    $title = 'Fachschaft Physik';
+    $is_po_active = '';
+    $is_fs_active = 'active';
 }
 
 ?>
@@ -32,10 +34,10 @@ if ($category == 'po') {
                   <div class="collapsible-body">
                     <ul>
                       <li><a href="https://vm.elearning.physik.uni-frankfurt.de/wordpress/erstsemester/"><i class="material-icons">face</i>Erstsemester</a></li>
-                      <li><a href="#"><i class="material-icons">child_care</i>Schüler</a></li>
-                      <li><a href="#"><i class="material-icons">book</i>Studiengang</a></li>
-                      <li><a href="#"><i class="material-icons">link</i>Linksammlung</a></li>
-                      <li><a href="#"><i class="material-icons">help</i>FAQ</a></li>
+                      <li><a href="https://vm.elearning.physik.uni-frankfurt.de/wordpress/schuler/"><i class="material-icons">child_care</i>Schüler</a></li>
+                      <li><a href="https://vm.elearning.physik.uni-frankfurt.de/wordpress/studiengang/"><i class="material-icons">book</i>Studiengang</a></li>
+                      <li><a href="https://vm.elearning.physik.uni-frankfurt.de/wordpress/linksammlung/"><i class="material-icons">link</i>Linksammlung</a></li>
+                      <li><a href="https://vm.elearning.physik.uni-frankfurt.de/wordpress/faq/"><i class="material-icons">help</i>FAQ</a></li>
                     </ul>
                   </div>
                 </li>
