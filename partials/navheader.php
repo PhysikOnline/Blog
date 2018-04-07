@@ -16,7 +16,7 @@ if ($category == 'po') {
   $contact_link = '#';
 } else {
   $about_link = 'https://vm.elearning.physik.uni-frankfurt.de/wordpress/about-fs/';
-  $contact_link = ' https://vm.elearning.physik.uni-frankfurt.de/wordpress/contact-fs/';  
+  $contact_link = 'https://vm.elearning.physik.uni-frankfurt.de/wordpress/contact-fs/';  
 }
 
 

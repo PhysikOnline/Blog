@@ -48,17 +48,17 @@ if ($category == 'po') {
                   </div>
                   <div class="collapsible-body">
                     <ul>
-                      <li><a href="#"><i class="material-icons">directions_run</i>Phifa</a></li>
-                      <li><a href="#"><i class="material-icons">child_friendly</i>Erstsemestereinführung</a></li>
-                      <li><a href="#"><i class="material-icons">local_movies</i>Höhrsaalkino (HSK)</a></li>
+                      <li><a href="https://vm.elearning.physik.uni-frankfurt.de/wordpress/phifa"><i class="material-icons">directions_run</i>Phifa</a></li>
+                      <li><a href="https://vm.elearning.physik.uni-frankfurt.de/wordpress/eev"><i class="material-icons">child_friendly</i>Erstsemestereinführung</a></li>
+                      <li><a href="https://vm.elearning.physik.uni-frankfurt.de/wordpress/hsk"><i class="material-icons">local_movies</i>Hörsaalkino (HSK)</a></li>
                     </ul>
                   </div>
                 </li>
                 <li>
-                  <a href="#"><i class="material-icons">people</i>About</a>
+                  <a href= "https://vm.elearning.physik.uni-frankfurt.de/wordpress/about-fs/" ><i class="material-icons">people</i>About</a>
                 </li>
                 <li>
-                  <a href="#"><i class="material-icons">contact_mail</i>Kontakt</a>
+                  <a href="https://vm.elearning.physik.uni-frankfurt.de/wordpress/contact-fs/"><i class="material-icons">contact_mail</i>Kontakt</a>
                 </li>
                 <li>
                   <a href="#"><i class="material-icons">contact_mail</i>Downloads</a>
