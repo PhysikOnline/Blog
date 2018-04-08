@@ -1,6 +1,5 @@
 <?php 
 get_header();
-set_query_var( 'view-category', 'po' );
 set_query_var( 'view-page', 'blog' );
 get_template_part('partials/sidebar');
 get_template_part('partials/navheader');
