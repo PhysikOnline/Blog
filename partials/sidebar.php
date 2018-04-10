@@ -33,11 +33,11 @@ if ($category == 'po') {
                   </div>
                   <div class="collapsible-body">
                     <ul>
-                      <li><a href="https://vm.elearning.physik.uni-frankfurt.de/wordpress/erstsemester/"><i class="material-icons">face</i>Erstsemester</a></li>
-                      <li><a href="https://vm.elearning.physik.uni-frankfurt.de/wordpress/schuler/"><i class="material-icons">child_care</i>Schüler</a></li>
-                      <li><a href="https://vm.elearning.physik.uni-frankfurt.de/wordpress/studiengang/"><i class="material-icons">book</i>Studiengang</a></li>
-                      <li><a href="https://vm.elearning.physik.uni-frankfurt.de/wordpress/linksammlung/"><i class="material-icons">link</i>Linksammlung</a></li>
-                      <li><a href="https://vm.elearning.physik.uni-frankfurt.de/wordpress/faq/"><i class="material-icons">help</i>FAQ</a></li>
+                      <li><a href="<?php bloginfo('wpurl') ?>/erstsemester/"><i class="material-icons">face</i>Erstsemester</a></li>
+                      <li><a href="<?php bloginfo('wpwurl') ?>/schuler/"><i class="material-icons">child_care</i>Schüler</a></li>
+                      <li><a href="<?php bloginfo('wpwurl') ?>/studiengang/"><i class="material-icons">book</i>Studiengang</a></li>
+                      <li><a href="<?php bloginfo('wpwurl') ?>/linksammlung/"><i class="material-icons">link</i>Linksammlung</a></li>
+                      <li><a href="<?php bloginfo('wpwurl') ?>/faq/"><i class="material-icons">help</i>FAQ</a></li>
                     </ul>
                   </div>
                 </li>
@@ -48,23 +48,23 @@ if ($category == 'po') {
                   </div>
                   <div class="collapsible-body">
                     <ul>
-                      <li><a href="https://vm.elearning.physik.uni-frankfurt.de/wordpress/phifa"><i class="material-icons">directions_run</i>Phifa</a></li>
-                      <li><a href="https://vm.elearning.physik.uni-frankfurt.de/wordpress/eev"><i class="material-icons">child_friendly</i>Erstsemestereinführung</a></li>
-                      <li><a href="https://vm.elearning.physik.uni-frankfurt.de/wordpress/hsk"><i class="material-icons">local_movies</i>Hörsaalkino (HSK)</a></li>
+                      <li><a href="<?php bloginfo('wpwurl') ?>/phifa"><i class="material-icons">directions_run</i>Phifa</a></li>
+                      <li><a href="<?php bloginfo('wpwurl') ?>/eev"><i class="material-icons">child_friendly</i>Erstsemestereinführung</a></li>
+                      <li><a href="<?php bloginfo('wpwurl') ?>/hsk"><i class="material-icons">local_movies</i>Hörsaalkino (HSK)</a></li>
                     </ul>
                   </div>
                 </li>
                 <li>
-                  <a href= "https://vm.elearning.physik.uni-frankfurt.de/wordpress/about-fs/" ><i class="material-icons">people</i>About</a>
+                  <a href= "<?php bloginfo('wpwurl') ?>/about-fs/" ><i class="material-icons">people</i>About</a>
                 </li>
                 <li>
-                  <a href="https://vm.elearning.physik.uni-frankfurt.de/wordpress/contact-fs/"><i class="material-icons">contact_mail</i>Kontakt</a>
+                  <a href="<?php bloginfo('wpwurl') ?>/contact-fs/"><i class="material-icons">contact_mail</i>Kontakt</a>
                 </li>
                 <li>
                   <a href="#"><i class="material-icons">contact_mail</i>Downloads</a>
                 </li>
                 <li>
-                <a href="/wordpress/category/fs-physik/" >
+                <a href="<?php bloginfo('wpwurl') ?>/category/fs-physik/" >
                   <i class="material-icons left">whatshot</i>Blog
                 </a>
                 </li>
