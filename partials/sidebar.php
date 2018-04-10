@@ -9,6 +9,7 @@ if ($category == 'po') {
     $title = 'Fachschaft Physik';
     $is_po_active = '';
     $is_fs_active = 'active';
+    $theme_color = 'yellow darken-4';
 } else {
     $title = 'Fachschaft Physik';
     $is_po_active = '';
@@ -16,7 +17,7 @@ if ($category == 'po') {
 }
 
 ?>
-<div id="slide-out" class=" collection side-nav fixed with-header">
+<div id="slide-out" class="<?php echo $theme_color;?> collection side-nav fixed with-header">
   <a href="/wordpress" class="collection-header"><h5><?php echo $title; ?></h5></a>
   <ul class="collapsible" data-collapsible="accordion">
   <!-- FS -->
