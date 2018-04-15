@@ -5,15 +5,16 @@ if ($category == 'po') {
     $title = 'PhysikOnline';
     $is_po_active = 'active';
     $is_fs_active = '';
+    $theme_color = '';
 } elseif ($category == 'fs') {
     $title = 'Fachschaft Physik';
     $is_po_active = '';
     $is_fs_active = 'active';
     $theme_color = 'yellow darken-4';
 } else {
-    $title = 'Fachschaft Physik';
-    $is_po_active = '';
-    $is_fs_active = 'active';
+    $title = 'PhysikOnline';
+    $is_po_active = 'active';
+    $is_fs_active = '';
 }
 
 ?>
@@ -65,9 +66,9 @@ if ($category == 'po') {
                   <a href="#"><i class="material-icons">contact_mail</i>Downloads</a>
                 </li>
                 <li>
-                <a href="<?php bloginfo('wpwurl') ?>/category/fs-physik/" >
-                  <i class="material-icons left">whatshot</i>Blog
-                </a>
+                  <a href="<?php bloginfo('wpwurl') ?>/category/fs-physik/" >
+                    <i class="material-icons left">whatshot</i>Blog
+                  </a>
                 </li>
               </ul>
             </span>
@@ -77,21 +78,23 @@ if ($category == 'po') {
   <!-- PO -->
         <li>
           <div class="collapsible-header">
-            <i class="material-icons">place</i>PhysikOnline
+            <i class="material-icons">code</i>PhysikOnline
           </div>
-          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+          <div class="collapsible-body">
+            <span>
+            <ul class="collapsible" data-collapsible="accordion">
+              <li>
+                <a href="<?php bloginfo('wpwurl') ?>/category/physikonline/" >
+                  <i class="material-icons left">whatshot</i>Blog
+                </a>
+              </li>
+            </ul>
+            </span>
+          </div>
         </li>
-      </ul>
-  <!-- /PO -->
-  <!-- FS -->
-  <!-- <a href="/wordpress/category/fs-physik/" class="collection-item waves-effect <?php echo $is_fs_active; ?>">
-    <i class="material-icons left">weekend</i>Fachschaft Physik
-  </a> -->
-  <!-- /FS -->
-  <!-- PO -->
-  <a href="/wordpress/category/physikonline/" class="collection-item waves-effect <?php echo $is_po_active; ?>">
-    <i class="material-icons left">code</i>PhysikOnline</a>
-  <!-- /PO -->
+<!-- /PO -->
+
+  
 
   <a href="https://riedberg.tv" class="collection-item waves-effect">
     <i class="material-icons left">live_tv</i>RiedbergTV</a>
@@ -99,4 +102,5 @@ if ($category == 'po') {
     <i class="material-icons left">insert_link</i>URL-Shortener</a>
   <a href="https://podcast-wiki.physik.uni-frankfurt.de" class="collection-item waves-effect"><i class="material-icons left">voice_chat</i>Podcast-Wiki</a>
   <a href="#" class="collection-item waves-effect"><i class="material-icons left">voice_chat</i>Impressum</a>
+  </ul>
 </div>
