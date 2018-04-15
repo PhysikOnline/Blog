@@ -35,11 +35,11 @@ if ($category == 'po') {
                   </div>
                   <div class="collapsible-body">
                     <ul>
-                      <li><a href="<?php bloginfo('wpurl') ?>/erstsemester/"><i class="material-icons">face</i>Erstsemester</a></li>
-                      <li><a href="<?php bloginfo('wpwurl') ?>/schuler/"><i class="material-icons">child_care</i>Schüler</a></li>
-                      <li><a href="<?php bloginfo('wpwurl') ?>/studiengang/"><i class="material-icons">book</i>Studiengang</a></li>
-                      <li><a href="<?php bloginfo('wpwurl') ?>/linksammlung/"><i class="material-icons">link</i>Linksammlung</a></li>
-                      <li><a href="<?php bloginfo('wpwurl') ?>/faq/"><i class="material-icons">help</i>FAQ</a></li>
+                      <li><a href="<?php echo home_url(); ?>/erstsemester/"><i class="material-icons">face</i>Erstsemester</a></li>
+                      <li><a href="<?php echo home_url(); ?>/schuler/"><i class="material-icons">child_care</i>Schüler</a></li>
+                      <li><a href="<?php echo home_url(); ?>/studiengang/"><i class="material-icons">book</i>Studiengang</a></li>
+                      <li><a href="<?php echo home_url(); ?>/linksammlung/"><i class="material-icons">link</i>Linksammlung</a></li>
+                      <li><a href="<?php echo home_url(); ?>/faq/"><i class="material-icons">help</i>FAQ</a></li>
                     </ul>
                   </div>
                 </li>
@@ -50,23 +50,23 @@ if ($category == 'po') {
                   </div>
                   <div class="collapsible-body">
                     <ul>
-                      <li><a href="<?php bloginfo('wpwurl') ?>/phifa"><i class="material-icons">directions_run</i>Phifa</a></li>
-                      <li><a href="<?php bloginfo('wpwurl') ?>/eev"><i class="material-icons">child_friendly</i>Erstsemestereinführung</a></li>
-                      <li><a href="<?php bloginfo('wpwurl') ?>/hsk"><i class="material-icons">local_movies</i>Hörsaalkino (HSK)</a></li>
+                      <li><a href="<?php echo home_url(); ?>/phifa"><i class="material-icons">directions_run</i>Phifa</a></li>
+                      <li><a href="<?php echo home_url(); ?>/eev"><i class="material-icons">child_friendly</i>Erstsemestereinführung</a></li>
+                      <li><a href="<?php echo home_url(); ?>/hsk"><i class="material-icons">local_movies</i>Hörsaalkino (HSK)</a></li>
                     </ul>
                   </div>
                 </li>
                 <li>
-                  <a href= "<?php bloginfo('wpwurl') ?>/about-fs/" ><i class="material-icons">people</i>About</a>
+                  <a href= "<?php echo home_url(); ?>/about-fs/" ><i class="material-icons">people</i>About</a>
                 </li>
                 <li>
-                  <a href="<?php bloginfo('wpwurl') ?>/contact-fs/"><i class="material-icons">contact_mail</i>Kontakt</a>
+                  <a href="<?php echo home_url(); ?>/contact-fs/"><i class="material-icons">contact_mail</i>Kontakt</a>
                 </li>
                 <li>
                   <a href="#"><i class="material-icons">contact_mail</i>Downloads</a>
                 </li>
                 <li>
-                  <a href="<?php bloginfo('wpwurl') ?>/category/fs-physik/" >
+                  <a href="<?php echo home_url(); ?>/category/fs-physik/" >
                     <i class="material-icons left">whatshot</i>Blog
                   </a>
                 </li>
@@ -84,7 +84,7 @@ if ($category == 'po') {
             <span>
             <ul class="collapsible" data-collapsible="accordion">
               <li>
-                <a href="<?php bloginfo('wpwurl') ?>/category/physikonline/" >
+                <a href="<?php echo home_url(); ?>/category/physikonline" >
                   <i class="material-icons left">whatshot</i>Blog
                 </a>
               </li>

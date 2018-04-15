@@ -9,10 +9,10 @@ get_template_part('partials/navheader');
  <!--MAIN-->       
 <main>
 <div class="row">
-        <div class="col s12 m6">
-           <h1>Projektvorstellungen</h1>
-        </div>
+    <div class="col s12 m6">
+        <h1>Projektvorstellungen</h1>
     </div>
+</div>
 </main>
 
 
