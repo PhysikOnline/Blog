@@ -1,5 +1,4 @@
 <?php 
-/* Template Name: Fachschaft */
 get_header();
 set_query_var( 'view-category', 'fs' );
 set_query_var( 'view-page', 'blog' );

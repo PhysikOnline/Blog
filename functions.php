@@ -1,16 +1,18 @@
 <?php
 add_theme_support( 'post-thumbnails' ); // to allow thumbnails for each post
 
-// Sets view-category ro 'Blog', 'About Us' or 'Contact' in the Navbar
+
+// Sets view-category ro 'Blog', 'About Us' or 'Contact' in the Navheader
+// Problem: Sets view-page after the Navheader is loaded -> active effect does not work
 // [view-page label="label-value"]
 function view_page_func( $atts ) {
     $a = shortcode_atts( array(
         'label' => '',
     ), $atts );
 	set_query_var('view-page', $a['label']);
-	echo 'shortcode works';
 }
 add_shortcode( 'view-page', 'view_page_func' );
+
 
 // Register Custom Post Type
 function custom_po_teammembers() {

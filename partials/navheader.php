@@ -26,9 +26,11 @@ else
 }
 
 if ($category == 'po') {
+  $blog_link = get_bloginfo('wpurl') . '/category/physikonline/';
   $about_link = get_bloginfo('wpurl') . '/about-po/';
   $contact_link = get_bloginfo('wpurl') . '/contact-po/'; 
 } else {
+  $blog_link = get_bloginfo('wpurl') . '/category/fs-physik/';
   $about_link = get_bloginfo('wpurl') . '/about-fs/';
   $contact_link = get_bloginfo('wpurl') . '/contact-fs/'; 
 }
@@ -39,7 +41,7 @@ if ($category == 'po') {
   <div class="nav-wrapper">
   <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
     <ul>
-      <li><a href="#!" class="<?php echo $is_blog_active; ?>">
+      <li><a href="<?php echo $blog_link;?>" class="<?php echo $is_blog_active; ?>">
       <i class="material-icons left hide-on-small-only">message</i>Blog</a>
       </li>
       <li><a href=<?php echo $about_link;?> class="<?php echo $is_about_us_active; ?>">
