@@ -1,11 +1,14 @@
         <!-- FOOTER --> 
         <footer class="page-footer">
-            <div class="footer-copyright">  
-                <div class="footainer">
+            <div class="footer-copyright row">  
+                <div class="footainer col m6 s12">
                     © 2017 PhysikOnline 
                     <ul>
-                    <li><a href="<?php echo home_url(); ?>/wp-admin">Bearbeiten</a>
+                    <li><a href="<?php echo home_url(); ?>/wp-admin">Bearbeiten</a></li>  
                     </ul>
+                </div>
+                <div class="col m6 offset-m6 s12">
+                    <a href="#">Impressum</a>
                 </div>
             </div>
         </footer>  

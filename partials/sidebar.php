@@ -63,11 +63,11 @@ if ($category == 'po') {
                   <a href="<?php echo home_url(); ?>/contact-fs/"><i class="material-icons">contact_mail</i>Kontakt</a>
                 </li>
                 <li>
-                  <a href="#"><i class="material-icons">contact_mail</i>Downloads</a>
+                  <a href="#"><i class="material-icons">get_app</i>Downloads</a>
                 </li>
                 <li>
                   <a href="<?php echo home_url(); ?>/category/fs-physik/" >
-                    <i class="material-icons left">whatshot</i>Blog
+                    <i class="material-icons left">class</i>Blog
                   </a>
                 </li>
               </ul>
@@ -83,9 +83,12 @@ if ($category == 'po') {
           <div class="collapsible-body">
             <span>
             <ul class="collapsible" data-collapsible="accordion">
+                <li>
+                  <a href="#"><i class="material-icons">explore</i>Projekte</a>
+                </li>
               <li>
                 <a href="<?php echo home_url(); ?>/category/physikonline" >
-                  <i class="material-icons left">whatshot</i>Blog
+                  <i class="material-icons left">class</i>Blog
                 </a>
               </li>
               <li>
@@ -106,6 +109,6 @@ if ($category == 'po') {
 <!-- /PO -->
 
   
-  <a href="#" class="collection-item waves-effect"><i class="material-icons left">voice_chat</i>Impressum</a>
+  <!-- <a href="#" class="collection-item waves-effect"><i class="material-icons left">voice_chat</i>Impressum</a> -->
   </ul>
 </div>
