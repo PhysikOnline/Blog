@@ -77,7 +77,7 @@ if ($category == 'po') {
   <!-- /FS -->
   <!-- PO -->
         <li>
-          <div class="collapsible-header">
+          <div class="collapsible-header <?php echo $is_po_active; ?>">
             <i class="material-icons">code</i>PhysikOnline
           </div>
           <div class="collapsible-body">
@@ -88,6 +88,17 @@ if ($category == 'po') {
                   <i class="material-icons left">whatshot</i>Blog
                 </a>
               </li>
+              <li>
+                <a href="https://riedberg.tv">
+                  <i class="material-icons left">live_tv</i>RiedbergTV</a>
+              </li>
+              <li>
+                <a href="https://physikonline.uni-frankfurt.de/portal/project/url-shorter" >
+                  <i class="material-icons left">insert_link</i>URL-Shortener</a>
+              </li>
+              <li>
+                <a href="https://podcast-wiki.physik.uni-frankfurt.de"><i class="material-icons left">voice_chat</i>Podcast-Wiki</a>
+              </li>
             </ul>
             </span>
           </div>
@@ -95,12 +106,6 @@ if ($category == 'po') {
 <!-- /PO -->
 
   
-
-  <a href="https://riedberg.tv" class="collection-item waves-effect">
-    <i class="material-icons left">live_tv</i>RiedbergTV</a>
-  <a href="https://physikonline.uni-frankfurt.de/portal/project/url-shorter" class="collection-item waves-effect">
-    <i class="material-icons left">insert_link</i>URL-Shortener</a>
-  <a href="https://podcast-wiki.physik.uni-frankfurt.de" class="collection-item waves-effect"><i class="material-icons left">voice_chat</i>Podcast-Wiki</a>
   <a href="#" class="collection-item waves-effect"><i class="material-icons left">voice_chat</i>Impressum</a>
   </ul>
 </div>

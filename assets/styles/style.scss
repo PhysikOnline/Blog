@@ -149,12 +149,19 @@ footer {
 
 footer.page-footer {
   background-color: color("po-md", "dark");
-  padding: 30px 30px 30px 330px;
+  padding: 10px 10px 10px 330px;
   &.page-footer .footer-copyright {
     color: $third-color;
     background-color: transparent;
   }
 }
+
+@media #{$medium-and-down} {
+  footer.page-footer {
+    padding: 10px 10px 10px 30px;
+  }
+}
+
 main {
   padding: 30px 30px 30px 330px;
 }
