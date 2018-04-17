@@ -16,7 +16,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
     if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
 ?>
     
-    <div class="col s12 offset-m2 m8">
+    <div class="col s12 offset-m1 m10">
         <div class="card">
             <div class="card-image">
                 <img src="<?php the_post_thumbnail_url( array(520, 390)); ?>">
