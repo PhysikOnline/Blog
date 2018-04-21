@@ -7,6 +7,7 @@ function display_member_func( $atts ) {
 		'name' => 'Name',
 		'page-src' => '#',
 		'img-src' => '#',
+		'special' => 'no'
 	), $atts );
 	$name = $a['name'];
 	$template_url = get_bloginfo('template_url');
@@ -14,15 +15,18 @@ function display_member_func( $atts ) {
 		$img_src = $template_url . '/assets/images/avatar_white.png';
 	} else {
 		$img_src = $a['img-src'];
-	}
+	};
+
+	if ($a['special'] == 'yes') {
+		$special_color = 'light-blue accent-3';
+		$special_text_color = ' white-text';
+	} else {
+		$special_color = '';
+		$special_text_color = '';
+	};
 	$page_src = $a['page-src']; 
 
-	return '<a href="' . $page_src . '">
-		<div class="chip">
-			<img src="' . $img_src . '" class="blue-grey lighten-3">
-			' . $name . '
-		</div>
-	</a>';
+	return '<a href="' . $page_src . '"><div class="chip ' . $special_color . $special_text_color . '"><img src="' . $img_src . '" class="blue-grey lighten-3">' . $name . '</div></a>';
 }
 add_shortcode( 'display-member', 'display_member_func');
 
