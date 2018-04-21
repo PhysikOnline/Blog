@@ -13,15 +13,75 @@ get_template_part('partials/navheader');
         <div class="card-image">
             <img src="<?php bloginfo('template_url') ?>/assets/images/Teamfoto2016.jpg" style="top: -50%;">
         </div>
-        <div class="card-content">
-        <h1 class="light center"> Über Uns </h1>
-            <span>
-            Alle Mitarbeiter bei PhysikOnline sind Studierende der Physik oder benachbarter Studiengänge. Sie sind als studentische Hilfskräfte angestellt oder arbeiten ehrenamtlich mit. Wir beziehen Gelder aus verschiedenen Töpfen, wobei die QSL-Mittel des Fachbereichs Physik den Grundstock an Mitarbeitern ermöglicht.
+        <div class="card-content container">
+            <div class="section">
+                <h1 class="light center"> Über Uns </h1>
+                <span>
+                Alle Mitarbeiter bei PhysikOnline sind Studierende der Physik oder benachbarter Studiengänge. Sie sind als studentische Hilfskräfte angestellt oder arbeiten ehrenamtlich mit. Wir beziehen Gelder aus verschiedenen Töpfen, wobei die QSL-Mittel des Fachbereichs Physik den Grundstock an Mitarbeitern ermöglicht.
 
-            Als studentisches Projekt lebt PhysikOnline von einem ständigen Kommen und Gehen. Manche Mitglieder von PhysikOnline sind nur wenige Monate angestellt, anderere sind bereits seit ihrem ganzen Studium dabei. Auf dieser Seite sind alle ehemaligen und amtierenden Teammitglieder aufgelistet. Diese Seite soll dabei Teile unseres Impressums ersetzen. Zu jedem Mitglied zeigen wir ein Photo, stellen ihn oder sie in einem kurzen Text mit Fähigkeiten, Zeitraum der Mitarbeit, und den Projekten, in denen er/sie mitgewirkt hat, vor.
+                Als studentisches Projekt lebt PhysikOnline von einem ständigen Kommen und Gehen. Manche Mitglieder von PhysikOnline sind nur wenige Monate angestellt, anderere sind bereits seit ihrem ganzen Studium dabei. Auf dieser Seite sind alle ehemaligen und amtierenden Teammitglieder aufgelistet. Diese Seite soll dabei Teile unseres Impressums ersetzen. Zu jedem Mitglied zeigen wir ein Photo, stellen ihn oder sie in einem kurzen Text mit Fähigkeiten, Zeitraum der Mitarbeit, und den Projekten, in denen er/sie mitgewirkt hat, vor.
 
-            Einzig nicht studentisches Mitglied in folgender Liste ist Professor Lüdde, der das Projekt betreut. Ansonsten gibt es im PhysikOnline-Projekt keine hierarchische Struktur, alle Teammitglieder beteiligen sich an den Projekten, die sie interessieren. Nach diesen Kriterien werden auch neue Mitglieder ins Team aufgenommen (siehe auch Bewerbungsformular).
-            </span>
+                Einzig nicht studentisches Mitglied in folgender Liste ist Professor Lüdde, der das Projekt betreut. Ansonsten gibt es im PhysikOnline-Projekt keine hierarchische Struktur, alle Teammitglieder beteiligen sich an den Projekten, die sie interessieren. Nach diesen Kriterien werden auch neue Mitglieder ins Team aufgenommen (siehe auch Bewerbungsformular).
+                </span>
+            </div>
+            <div class="divider"></div>
+            <?php
+            if ( have_posts() ) : while ( have_posts() ) : the_post();
+            the_content(); 
+            endwhile;
+            else :
+                _e( 'Sorry, no posts matched your criteria.', 'textdomain' );
+            endif;
+            ?>
+            <!-- <div class="section">
+                <h3 class="light">Aktuelle Mitglieder</h3>
+                <a href="https://cdn0.iconfinder.com/data/icons/user-pictures/100/unknown_1-512.png">
+                    <div class="chip">
+                        <img src="https://cdn0.iconfinder.com/data/icons/user-pictures/100/unknown_1-512.png" alt="Contact Person">
+                        Jane Doe
+                    </div>
+                </a>
+                <a href="https://cdn0.iconfinder.com/data/icons/user-pictures/100/unknown_1-512.png">
+                    <div class="chip">
+                        <img src="https://cdn0.iconfinder.com/data/icons/user-pictures/100/unknown_1-512.png" alt="Contact Person">
+                        Jane Doe
+                    </div>
+                </a>
+                <a href="https://cdn0.iconfinder.com/data/icons/user-pictures/100/unknown_1-512.png">
+                    <div class="chip">
+                        <img src="https://cdn0.iconfinder.com/data/icons/user-pictures/100/unknown_1-512.png" alt="Contact Person">
+                        Jane Doe
+                    </div>
+                </a>
+            </div>
+            <div class="divider"></div>
+            <div class="section">
+                <h3 class="light">Ehemalige Mitglieder</h3>
+                <a href="https://cdn0.iconfinder.com/data/icons/user-pictures/100/unknown_1-512.png">
+                    <div class="chip">
+                        <img src="https://cdn0.iconfinder.com/data/icons/user-pictures/100/unknown_1-512.png" alt="Contact Person">
+                        Jane Doe
+                    </div>
+                </a>
+                <a href="https://cdn0.iconfinder.com/data/icons/user-pictures/100/unknown_1-512.png">
+                    <div class="chip">
+                        <img src="https://cdn0.iconfinder.com/data/icons/user-pictures/100/unknown_1-512.png" alt="Contact Person">
+                        Jane Doe
+                    </div>
+                </a>
+                <a href="https://cdn0.iconfinder.com/data/icons/user-pictures/100/unknown_1-512.png">
+                    <div class="chip">
+                        <img src="https://cdn0.iconfinder.com/data/icons/user-pictures/100/unknown_1-512.png" alt="Contact Person">
+                        Jane Doe
+                    </div>
+                </a>
+                <a href="https://cdn0.iconfinder.com/data/icons/user-pictures/100/unknown_1-512.png">
+                    <div class="chip">
+                        <img src="https://cdn0.iconfinder.com/data/icons/user-pictures/100/unknown_1-512.png" alt="Contact Person">
+                        Jane Doe
+                    </div>
+                </a>
+            </div> -->
         </div>
     </div>  
 </main>

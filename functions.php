@@ -1,18 +1,30 @@
 <?php
 add_theme_support( 'post-thumbnails' ); // to allow thumbnails for each post
 
+// [display-member name="" page-src="", img-src=""]
+function display_member_func( $atts ) {
+	$a = shortcode_atts( array(
+		'name' => 'Name',
+		'page-src' => '#',
+		'img-src' => '#',
+	), $atts );
+	$name = $a['name'];
+	$template_url = get_bloginfo('template_url');
+	if ($a['img-src'] == '#'){
+		$img_src = $template_url . '/assets/images/avatar_white.png';
+	} else {
+		$img_src = $a['img-src'];
+	}
+	$page_src = $a['page-src']; 
 
-// Sets view-category ro 'Blog', 'About Us' or 'Contact' in the Navheader
-// Problem: Sets view-page after the Navheader is loaded -> active effect does not work
-// [view-page label="label-value"]
-function view_page_func( $atts ) {
-    $a = shortcode_atts( array(
-        'label' => '',
-    ), $atts );
-	set_query_var('view-page', $a['label']);
+	return '<a href="' . $page_src . '">
+		<div class="chip">
+			<img src="' . $img_src . '" class="blue-grey lighten-3">
+			' . $name . '
+		</div>
+	</a>';
 }
-add_shortcode( 'view-page', 'view_page_func' );
-
+add_shortcode( 'display-member', 'display_member_func');
 
 // Register Custom Post Type
 function custom_po_teammembers() {
