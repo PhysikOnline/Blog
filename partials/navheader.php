@@ -29,10 +29,14 @@ if ($category == 'po') {
   $blog_link = get_bloginfo('wpurl') . '/category/physikonline/';
   $about_link = get_bloginfo('wpurl') . '/about-po/';
   $contact_link = get_bloginfo('wpurl') . '/contact-po/'; 
-} else {
+} elseif ($category == 'fs') {
   $blog_link = get_bloginfo('wpurl') . '/category/fs-physik/';
   $about_link = get_bloginfo('wpurl') . '/about-fs/';
   $contact_link = get_bloginfo('wpurl') . '/contact-fs/'; 
+} else {
+  $blog_link = get_bloginfo('wpurl') . '/category/physikonline/';
+  $about_link = get_bloginfo('wpurl') . '/about-po/';
+  $contact_link = get_bloginfo('wpurl') . '/contact-po/'; 
 }
 
 
