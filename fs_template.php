@@ -8,18 +8,17 @@ get_template_part('partials/navheader');
 <!--MAIN-->       
 <main>
     <div class="row">
-<?php
-if ( have_posts() ) : while ( have_posts() ) : the_post();
-?>
-    <?php the_title(); ?>
-    <?php the_content()?>
-<?php
-endwhile;
-else :
-    _e( 'Sorry, no posts matched your criteria.', 'textdomain' );
-endif;
-?>
-        </div>
+        <?php
+        if ( have_posts() ): 
+            while ( have_posts() ): 
+                the_post();
+                the_title();
+                the_content();
+            endwhile;
+        else :
+            _e( 'Sorry, no posts matched your criteria.', 'textdomain' );
+        endif;
+        ?>
     </div>
 </main>
 

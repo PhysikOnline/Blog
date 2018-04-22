@@ -12,15 +12,20 @@ if ($category == 'po') {
     $is_fs_active = 'active';
     $theme_color = 'yellow darken-4';
 } else {
-    $title = 'PhysikOnline';
-    $is_po_active = 'active';
-    $is_fs_active = '';
+    $title = 'Physik-Blog';
+    $is_po_active = '';
+    $is_fs_active = 'active';
 }
 
 ?>
 <div id="slide-out" class="<?php echo $theme_color;?> collection side-nav fixed with-header">
   <a href="/wordpress" class="collection-header"><h5><?php echo $title; ?></h5></a>
   <ul class="collapsible" data-collapsible="accordion">
+        <li>
+          <a href="<?php echo home_url(); ?>" class="collapsible-header white-text">
+              <i class="material-icons white-text" style="margin-right: 1.4rem;">dashboard</i>Start
+          </a>
+        </li>
   <!-- FS -->
         <li>
           <div class="collapsible-header <?php echo $is_fs_active; ?>">
@@ -57,6 +62,9 @@ if ($category == 'po') {
                   </div>
                 </li>
                 <li>
+                  <a href= "<?php echo home_url(); ?>/start-fs/" ><i class="material-icons">home</i>Übersicht</a>
+                </li>
+                <li>
                   <a href= "<?php echo home_url(); ?>/about-fs/" ><i class="material-icons">people</i>About</a>
                 </li>
                 <li>
@@ -83,6 +91,9 @@ if ($category == 'po') {
           <div class="collapsible-body">
             <span>
             <ul class="collapsible" data-collapsible="accordion">
+                <li>
+                  <a href= "<?php echo home_url(); ?>/start-po/" ><i class="material-icons">home</i>Übersicht</a>
+                </li>
                 <li>
                   <a href="<?php echo home_url(); ?>/projekte"><i class="material-icons">explore</i>Projekte</a>
                 </li>

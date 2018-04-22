@@ -1,6 +1,6 @@
 <?php 
 get_header();
-set_query_var( 'view-category', '' );
+set_query_var( 'view-category', '0' );
 set_query_var( 'view-page', 'blog' );
 get_template_part('partials/sidebar');
 get_template_part('partials/navheader');
@@ -17,18 +17,20 @@ get_template_part('partials/navheader');
     </div>
     <div class="row section">
         <div class="col s12 m6">
-        <a href="#">
-            <div class="center">
-                <i class="material-icons large yellow-text text-darken-4">weekend</i>
-                <p class="flow-text">Zum Fachschafts-Blog</p>
-            </div>
-        </a>
+            <a href="<?php echo home_url(); ?>/fs-home/">
+                <div class="center">
+                    <i class="material-icons large yellow-text text-darken-4">weekend</i>
+                    <p class="flow-text">Zum Fachschaftsbereich</p>
+                </div>
+            </a>
         </div>
         <div class="col s12 m6">
-            <div class="center">
-                <i class="material-icons large light-blue-text text-darken-4">code</i>
-                <p class="flow-text">Zum PhysikOnline-Blog</p>
-            </div>
+            <a href="<?php echo home_url(); ?>/po-home/">
+                <div class="center">
+                    <i class="material-icons large light-blue-text text-darken-4">code</i>
+                    <p class="flow-text">Zum PhysikOnline Bereich</p>
+                </div>
+            </a>
         </div>
     </div>
 </div>

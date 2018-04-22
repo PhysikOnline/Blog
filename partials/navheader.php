@@ -48,15 +48,18 @@ if ($category == 'po') {
       <li><a href="https://elearning.physik.uni-frankfurt.de/">
       <i class="material-icons left hide-on-small-only">web</i>eLearning</a>
       </li>
+      <?php if ( ! $category == '0') : ?>
       <li><a href="<?php echo $blog_link;?>" class="<?php echo $is_blog_active; ?>">
       <i class="material-icons left hide-on-small-only">message</i>Blog</a>
       </li>
-      <li><a href=<?php echo $about_link;?> class="<?php echo $is_about_us_active; ?>">
-      <i class="material-icons left hide-on-small-only">people</i>About</a>
-      </li>
-      <li><a href=<?php echo $contact_link;?> class="<?php echo $is_contact_active; ?>">
-      <i class="material-icons left hide-on-small-only">contact_mail</i>Contact</a>
-      </li>
+        <li><a href=<?php echo $about_link;?> class="<?php echo $is_about_us_active; ?>">
+        <i class="material-icons left hide-on-small-only">people</i>About</a>
+        </li>
+        <li><a href=<?php echo $contact_link;?> class="<?php echo $is_contact_active; ?>">
+        <i class="material-icons left hide-on-small-only">contact_mail</i>Contact</a>
+        </li>
+        <li> <?php echo $category; ?> </li>        
+      <?php endif; ?>
     </ul>
   </div>
 </nav>

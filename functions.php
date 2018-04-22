@@ -18,7 +18,7 @@ function display_member_func( $atts ) {
 	};
 
 	if ($a['special'] == 'yes') {
-		$special_color = 'light-blue accent-3';
+		$special_color = 'grey darken-1';
 		$special_text_color = ' white-text';
 	} else {
 		$special_color = '';
