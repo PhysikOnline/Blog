@@ -21,8 +21,8 @@ get_template_part('partials/navheader');
 
                 Als studentisches Projekt lebt PhysikOnline von einem ständigen Kommen und Gehen. Manche Mitglieder von PhysikOnline sind nur wenige Monate angestellt, anderere sind bereits seit ihrem ganzen Studium dabei. Auf dieser Seite sind alle ehemaligen und amtierenden Teammitglieder aufgelistet. Diese Seite soll dabei Teile unseres Impressums ersetzen. Zu jedem Mitglied zeigen wir ein Photo, stellen ihn oder sie in einem kurzen Text mit Fähigkeiten, Zeitraum der Mitarbeit, und den Projekten, in denen er/sie mitgewirkt hat, vor.
 
-                Einzig nicht studentisches Mitglied in folgender Liste ist Professor Lüdde, der das Projekt betreut. Ansonsten gibt es im PhysikOnline-Projekt keine hierarchische Struktur, alle Teammitglieder beteiligen sich an den Projekten, die sie interessieren. Nach diesen Kriterien werden auch neue Mitglieder ins Team aufgenommen (siehe auch Bewerbungsformular).
-                </span>
+                Einzig nicht studentisches Mitglied in folgender Liste ist Professor Wagner, der das Projekt betreut. Ansonsten gibt es im PhysikOnline-Projekt keine hierarchische Struktur, alle Teammitglieder beteiligen sich an den Projekten, die sie interessieren. Nach diesen Kriterien werden auch neue Mitglieder ins Team aufgenommen.
+                </p>
             </div>
             <div class="divider"></div>
             <?php
@@ -33,55 +33,6 @@ get_template_part('partials/navheader');
                 _e( 'Sorry, no posts matched your criteria.', 'textdomain' );
             endif;
             ?>
-            <!-- <div class="section">
-                <h3 class="light">Aktuelle Mitglieder</h3>
-                <a href="https://cdn0.iconfinder.com/data/icons/user-pictures/100/unknown_1-512.png">
-                    <div class="chip">
-                        <img src="https://cdn0.iconfinder.com/data/icons/user-pictures/100/unknown_1-512.png" alt="Contact Person">
-                        Jane Doe
-                    </div>
-                </a>
-                <a href="https://cdn0.iconfinder.com/data/icons/user-pictures/100/unknown_1-512.png">
-                    <div class="chip">
-                        <img src="https://cdn0.iconfinder.com/data/icons/user-pictures/100/unknown_1-512.png" alt="Contact Person">
-                        Jane Doe
-                    </div>
-                </a>
-                <a href="https://cdn0.iconfinder.com/data/icons/user-pictures/100/unknown_1-512.png">
-                    <div class="chip">
-                        <img src="https://cdn0.iconfinder.com/data/icons/user-pictures/100/unknown_1-512.png" alt="Contact Person">
-                        Jane Doe
-                    </div>
-                </a>
-            </div>
-            <div class="divider"></div>
-            <div class="section">
-                <h3 class="light">Ehemalige Mitglieder</h3>
-                <a href="https://cdn0.iconfinder.com/data/icons/user-pictures/100/unknown_1-512.png">
-                    <div class="chip">
-                        <img src="https://cdn0.iconfinder.com/data/icons/user-pictures/100/unknown_1-512.png" alt="Contact Person">
-                        Jane Doe
-                    </div>
-                </a>
-                <a href="https://cdn0.iconfinder.com/data/icons/user-pictures/100/unknown_1-512.png">
-                    <div class="chip">
-                        <img src="https://cdn0.iconfinder.com/data/icons/user-pictures/100/unknown_1-512.png" alt="Contact Person">
-                        Jane Doe
-                    </div>
-                </a>
-                <a href="https://cdn0.iconfinder.com/data/icons/user-pictures/100/unknown_1-512.png">
-                    <div class="chip">
-                        <img src="https://cdn0.iconfinder.com/data/icons/user-pictures/100/unknown_1-512.png" alt="Contact Person">
-                        Jane Doe
-                    </div>
-                </a>
-                <a href="https://cdn0.iconfinder.com/data/icons/user-pictures/100/unknown_1-512.png">
-                    <div class="chip">
-                        <img src="https://cdn0.iconfinder.com/data/icons/user-pictures/100/unknown_1-512.png" alt="Contact Person">
-                        Jane Doe
-                    </div>
-                </a>
-            </div> -->
         </div>
     </div>  
 </main>

@@ -77,14 +77,14 @@ if ($category == 'po') {
   <!-- /FS -->
   <!-- PO -->
         <li>
-          <div class="collapsible-header <?php echo $is_po_active; ?>">
+          <div id="po-subheader" class="collapsible-header <?php echo $is_po_active; ?>">
             <i class="material-icons">code</i>PhysikOnline
           </div>
           <div class="collapsible-body">
             <span>
             <ul class="collapsible" data-collapsible="accordion">
                 <li>
-                  <a href="#"><i class="material-icons">explore</i>Projekte</a>
+                  <a href="<?php echo home_url(); ?>/projekte"><i class="material-icons">explore</i>Projekte</a>
                 </li>
               <li>
                 <a href="<?php echo home_url(); ?>/category/physikonline" >

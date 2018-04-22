@@ -9,10 +9,30 @@ get_template_part('partials/navheader');
  <!--MAIN-->       
 <main>
 <div class="row">
-    <div class="col s12 m6">
-        <h1>Projektvorstellungen</h1>
+    <div class="col s12 offset-m1 m10">
+        <h1 class="light center">Willkommen auf dem Physik-Blog!</h1>
+        <p class="flow-text center">
+            Hier findest du alles rund um das Physik Studium an der Goethe Universität Frankfurt.
+        </p>
+    </div>
+    <div class="row section">
+        <div class="col s12 m6">
+        <a href="#">
+            <div class="center">
+                <i class="material-icons large yellow-text text-darken-4">weekend</i>
+                <p class="flow-text">Zum Fachschafts-Blog</p>
+            </div>
+        </a>
+        </div>
+        <div class="col s12 m6">
+            <div class="center">
+                <i class="material-icons large light-blue-text text-darken-4">code</i>
+                <p class="flow-text">Zum PhysikOnline-Blog</p>
+            </div>
+        </div>
     </div>
 </div>
+
 </main>
 
 
