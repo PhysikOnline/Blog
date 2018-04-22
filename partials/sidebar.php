@@ -11,6 +11,11 @@ if ($category == 'po') {
     $is_po_active = '';
     $is_fs_active = 'active';
     $theme_color = 'yellow darken-4';
+} elseif ($category =='index'){
+  $title = 'Physik-Blog';
+  $is_po_active = '';
+  $is_fs_active = '';
+  $is_index_active = 'active';
 } else {
     $title = 'Physik-Blog';
     $is_po_active = '';
@@ -22,7 +27,7 @@ if ($category == 'po') {
   <a href="/wordpress" class="collection-header"><h5><?php echo $title; ?></h5></a>
   <ul class="collapsible" data-collapsible="accordion">
         <li>
-          <a href="<?php echo home_url(); ?>" class="collapsible-header white-text">
+          <a href="<?php echo home_url(); ?>" class="collapsible-header white-text <?php echo $is_index_active; ?>">
               <i class="material-icons white-text" style="margin-right: 1.4rem;">dashboard</i>Start
           </a>
         </li>

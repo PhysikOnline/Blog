@@ -48,7 +48,7 @@ if ($category == 'po') {
       <li><a href="https://elearning.physik.uni-frankfurt.de/">
       <i class="material-icons left hide-on-small-only">web</i>eLearning</a>
       </li>
-      <?php if ( ! $category == '0') : ?>
+      <?php if ( ! $category == 'index') : ?>
       <li><a href="<?php echo $blog_link;?>" class="<?php echo $is_blog_active; ?>">
       <i class="material-icons left hide-on-small-only">message</i>Blog</a>
       </li>
