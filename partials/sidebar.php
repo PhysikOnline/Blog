@@ -6,11 +6,13 @@ if ($category == 'po') {
     $is_po_active = 'active';
     $is_fs_active = '';
     $theme_color = '';
+    $is_index_active = '';
 } elseif ($category == 'fs') {
     $title = 'Fachschaft Physik';
     $is_po_active = '';
     $is_fs_active = 'active';
     $theme_color = 'yellow darken-4';
+    $is_index_active = '';
 } elseif ($category =='index'){
   $title = 'Physik-Blog';
   $is_po_active = '';
@@ -20,6 +22,7 @@ if ($category == 'po') {
     $title = 'Physik-Blog';
     $is_po_active = '';
     $is_fs_active = 'active';
+    $is_index_active = '';
 }
 
 ?>
