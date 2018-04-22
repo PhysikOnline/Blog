@@ -67,7 +67,7 @@ if ($category == 'po') {
                   </div>
                 </li>
                 <li>
-                  <a href= "<?php echo home_url(); ?>/start-fs/" ><i class="material-icons">home</i>Übersicht</a>
+                  <a href= "<?php echo home_url(); ?>/fs-home/" ><i class="material-icons">home</i>Übersicht</a>
                 </li>
                 <li>
                   <a href= "<?php echo home_url(); ?>/about-fs/" ><i class="material-icons">people</i>About</a>
@@ -97,7 +97,7 @@ if ($category == 'po') {
             <span>
             <ul class="collapsible" data-collapsible="accordion">
                 <li>
-                  <a href= "<?php echo home_url(); ?>/start-po/" ><i class="material-icons">home</i>Übersicht</a>
+                  <a href= "<?php echo home_url(); ?>/po-home/" ><i class="material-icons">home</i>Übersicht</a>
                 </li>
                 <li>
                   <a href="<?php echo home_url(); ?>/projekte"><i class="material-icons">explore</i>Projekte</a>
