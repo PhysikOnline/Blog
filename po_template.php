@@ -1,23 +1,25 @@
-<?php 
-/* Template Name: Fachschaft */
+<?php
+/* Template Name: PhysikOnline */
 get_header();
-set_query_var( 'view-category', 'fs' );
+set_query_var('view-category', 'po');
+set_query_var('view-page', '');
+
+// selects active navheader lis
 global $wp;
 $url = home_url( $wp->request );
-if ( $url == home_url() . '/contact-fs') {
+if ( $url == home_url() . '/contact-po') {
 	set_query_var('view-page', 'contact');
-} elseif ( $url == home_url() . '/about-fs' ){
+} elseif ( $url == home_url() . '/about_po' ){
 	set_query_var('view-page', 'about_us');
-} elseif ($url == home_url() . '/category/fs-physik' ){
+} elseif ($url == home_url() . '/category/physikonline/' ){
 	set_query_var('view-page', 'blog');
-}; 
+};
+
 get_template_part('partials/sidebar');
 get_template_part('partials/navheader');
 ?>
-
-<span class="flow-text center"><?php echo $url ?></span>
-<!--MAIN-->       
-<main>
+ <!--MAIN-->
+ <main>
     <div class="row">
         <?php
         if ( have_posts() ): 
@@ -33,5 +35,5 @@ get_template_part('partials/navheader');
     </div>
 </main>
 
-<!-- FOOTER -->   
-<?php get_footer(); ?>
+<!-- FOOTER -->
+<?php get_footer();?>

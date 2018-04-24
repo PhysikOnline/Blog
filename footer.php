@@ -8,6 +8,7 @@
                     </ul>
                 </div>
                 <div class="col m6 offset-m6 s12">
+                    <br>
                     <a href="#">Impressum</a>
                 </div>
             </div>

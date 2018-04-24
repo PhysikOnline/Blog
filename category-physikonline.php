@@ -1,5 +1,4 @@
 <?php
-/* Template Name: PhysikOnline */
 get_header();
 set_query_var('view-category', 'po');
 set_query_var('view-page', 'blog');
