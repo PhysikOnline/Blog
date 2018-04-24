@@ -4,7 +4,7 @@ get_header();
 set_query_var('view-category', 'po');
 set_query_var('view-page', '');
 
-// selects active navheader lis
+// selects active navheader li
 global $wp;
 $url = home_url( $wp->request );
 if ( $url == home_url() . '/contact-po') {

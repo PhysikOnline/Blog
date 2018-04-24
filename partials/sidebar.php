@@ -7,12 +7,14 @@ if ($category == 'po') {
     $is_fs_active = '';
     $theme_color = '';
     $is_index_active = '';
+    $home_url = home_url() . '/po-home';
 } elseif ($category == 'fs') {
     $title = 'Fachschaft Physik';
     $is_po_active = '';
     $is_fs_active = 'active';
     $theme_color = 'yellow darken-4';
     $is_index_active = '';
+    $home_url = home_url() . '/fs-home';
 } elseif ($category =='index'){
   $title = 'Physik-Blog';
   $is_po_active = '';
@@ -23,11 +25,12 @@ if ($category == 'po') {
     $is_po_active = '';
     $is_fs_active = 'active';
     $is_index_active = '';
+    $home_url = home_url();
 }
 
 ?>
 <div id="slide-out" class="<?php echo $theme_color;?> collection side-nav fixed with-header">
-  <a href="/wordpress" class="collection-header"><h5><?php echo $title; ?></h5></a>
+  <a href="<?php echo $home_url?>" class="collection-header"><h5><?php echo $title; ?></h5></a>
   <ul class="collapsible" data-collapsible="accordion">
         <li>
           <a href="<?php echo home_url(); ?>" class="collapsible-header white-text <?php echo $is_index_active; ?>">

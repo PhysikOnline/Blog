@@ -10,12 +10,13 @@ if ( $url == home_url() . '/contact-fs') {
 	set_query_var('view-page', 'about_us');
 } elseif ($url == home_url() . '/category/fs-physik' ){
 	set_query_var('view-page', 'blog');
-}; 
+} else {
+    set_query_var('view-page', '');
+}
 get_template_part('partials/sidebar');
 get_template_part('partials/navheader');
 ?>
 
-<span class="flow-text center"><?php echo $url ?></span>
 <!--MAIN-->       
 <main>
     <div class="row">
