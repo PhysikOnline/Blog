@@ -15,11 +15,11 @@ if ($category == 'po') {
     $theme_color = 'yellow darken-4';
     $is_index_active = '';
     $home_url = home_url() . '/fs-home';
-} elseif ($category =='index'){
-  $title = 'Physik-Blog';
-  $is_po_active = '';
-  $is_fs_active = '';
-  $is_index_active = 'active';
+} elseif ($category == 'index') {
+    $title = 'Physik-Blog';
+    $is_po_active = '';
+    $is_fs_active = '';
+    $is_index_active = 'active';
 } else {
     $title = 'Physik-Blog';
     $is_po_active = '';
@@ -29,8 +29,14 @@ if ($category == 'po') {
 }
 
 ?>
-<div id="slide-out" class="<?php echo $theme_color;?> collection side-nav fixed with-header">
-  <a href="<?php echo $home_url?>" class="collection-header"><h5><?php echo $title; ?></h5></a>
+<div id="slide-out" class="<?php echo $theme_color; ?> collection side-nav fixed with-header">
+  <a href="<?php echo $home_url ?>" class="collection-header"><h5>
+  <?php
+if ($category == 'fs') {
+    echo '<img style="vertical-align: middle; margin-right: 20px;" src="' . get_template_directory_uri() . '/assets/images/prof.gif">';
+}
+echo $title;
+?></h5></a>
   <ul class="collapsible" data-collapsible="accordion">
     <li>
       <a href="<?php echo home_url(); ?>" class="collapsible-header white-text <?php echo $is_index_active; ?>">
@@ -46,7 +52,7 @@ if ($category == 'po') {
         <span>
           <ul class="sub-collapsible collapsible" data-collapsible="accordion">
             <li>
-              <div class="collapsible-header collection-item sublist-padding"><i class="material-icons">info</i>Informationen 
+              <div class="collapsible-header collection-item sublist-padding"><i class="material-icons">info</i>Informationen
               <a href="#" class="secondary-content" style="padding-left: 44.5px;"><i class="material-icons">keyboard_arrow_down</i></a>
               </div>
               <div class="collapsible-body">
