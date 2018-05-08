@@ -46,10 +46,11 @@ if ($category == 'po') {
         <span>
           <ul class="sub-collapsible collapsible" data-collapsible="accordion">
             <li>
-              <div class="collapsible-header collection-item sublist-padding"><i class="material-icons">info</i>Informationen 
+              <div class="collapsible-header collection-item sublist-padding">
+              <i class="material-icons">info</i>Informationen 
               <a href="#" class="secondary-content" style="padding-left: 44.5px;"><i class="material-icons">keyboard_arrow_down</i></a>
               </div>
-              <div class="collapsible-body">
+              <div class="collapsible-body" style="margin-left: 20px;">
                 <ul>
                   <li><a href="<?php echo home_url(); ?>/erstsemester/"><i class="material-icons">face</i>Erstsemester</a></li>
                   <li><a href="<?php echo home_url(); ?>/schuler/"><i class="material-icons">child_care</i>Schüler</a></li>
@@ -64,7 +65,7 @@ if ($category == 'po') {
                 <i class="material-icons">event</i>Veranstaltungen
                 <a href="#" class="secondary-content"><i class="material-icons">keyboard_arrow_down</i></a>
               </div>
-              <div class="collapsible-body">
+              <div class="collapsible-body" style="margin-left: 20px;">
                 <ul>
                   <li><a href="<?php echo home_url(); ?>/phifa"><i class="material-icons">directions_run</i>Phifa</a></li>
                   <li><a href="<?php echo home_url(); ?>/eev"><i class="material-icons">child_friendly</i>Erstsemestereinführung</a></li>
