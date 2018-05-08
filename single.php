@@ -13,9 +13,20 @@ $gen_cat_id = get_cat_id('Uncategorized');
     <div class="row">
 
 <?php
+// excludes any other category than fs or po as current category
 if ( have_posts() ) : while ( have_posts() ) : the_post();
 $categories = get_the_category();
-$current_post_cat = esc_html( $categories[0]->name );
+if ( !(esc_html( in_array('Allgemein', $categories) ) ) == 'Allgemein'){
+    $current_post_cat = esc_html( $categories[0]->name );
+} else {
+    if ( !($categories[1]  == NULL) ){
+        $current_post_cat = esc_html( $categories[1]->name );
+    } else {
+        $current_post_cat = NULL;
+    }
+};
+
+// excludes po or fs category based on current category
 if ( $current_post_cat == 'PhysikOnline'){
     $excluded_cat_id = array($fs_cat_id, $gen_cat_id, get_cat_id('Allgemein')); 
 } else {
