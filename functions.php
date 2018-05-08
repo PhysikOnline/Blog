@@ -5,12 +5,15 @@ add_theme_support( 'post-thumbnails' ); // to allow thumbnails for each post
 function display_member_func( $atts ) {
 	$a = shortcode_atts( array(
 		'name' => 'Name',
-		'page-src' => '#',
+		'has-page' => 'no',
 		'img-src' => '#',
 		'special' => 'no'
 	), $atts );
+
 	$name = $a['name'];
 	$template_url = get_bloginfo('template_url');
+	$has_page = $a['has-page'];
+
 	if ($a['img-src'] == '#'){
 		$img_src = $template_url . '/assets/images/avatar_white.png';
 	} else {
@@ -24,7 +27,19 @@ function display_member_func( $atts ) {
 		$special_color = '';
 		$special_text_color = '';
 	};
-	$page_src = $a['page-src']; 
+
+	if ( $has_page == 'yes' ) {
+		$names_array = explode( ' ', $a['name'] );
+		$name_url = $names_array[0];
+		for ( $i = 1; $i < count($names_array); $i++ ){
+			$name_work = $names_array[$i];
+			$name_url = $name_url . '-' . $name_work;
+		};
+		$page_src = home_url() . '/' . $name_url; 
+	} else {
+		$page_src = '#';
+	};
+	
 
 	return '<a href="' . $page_src . '"><div class="chip ' . $special_color . $special_text_color . '"><img src="' . $img_src . '" class="blue-grey lighten-3">' . $name . '</div></a>';
 }

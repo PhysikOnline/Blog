@@ -1,10 +1,12 @@
 <?php 
 get_header();
-set_query_var( 'view-category', 'po' );
+set_query_var( 'view-category', '' );
 set_query_var( 'view-page', 'blog' );
 get_template_part('partials/sidebar');
 get_template_part('partials/navheader');
-
+$po_cat_id = get_cat_id('PhysikOnline');
+$fs_cat_id = get_cat_id('Fachschaft Physik');
+$gen_cat_id = get_cat_id('Uncategorized');
 ?>
 
 <main>
@@ -12,6 +14,13 @@ get_template_part('partials/navheader');
 
 <?php
 if ( have_posts() ) : while ( have_posts() ) : the_post();
+$categories = get_the_category();
+$current_post_cat = esc_html( $categories[0]->name );
+if ( $current_post_cat == 'PhysikOnline'){
+    $excluded_cat_id = array($fs_cat_id, $gen_cat_id, get_cat_id('Allgemein')); 
+} else {
+    $excluded_cat_id = array($po_cat_id, $gen_cat_id, get_cat_id('Allgemein'));
+}
 
     if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
 ?>
@@ -29,8 +38,23 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
                 <span><i class="material-icons left">access_time</i><?php the_date('d.m.Y'); ?></span>
             </div>
         </div>
-        <span><?php previous_post_link("%link", "%title", true); ?></span><br>
-        <span><?php next_post_link("%link", "%title", true); ?></span>
+            <!-- PREVIOUS POST -->
+            <a class="waves-effect waves-light btn" href="
+                <?php 
+                $previous_post = get_previous_post( $in_same_category = TRUE, $excluded_terms = $excluded_cat_id );
+                echo esc_url( get_permalink( $previous_post->ID ) ); 
+                ?>"> 
+                    Previous Post
+                </a>
+                <!-- <span><i class="material-icons left">access_time</i><?php the_date('d.m.Y'); ?></span> -->
+
+            <!-- NEXT POST -->
+                <a class="waves-effect waves-light btn" href="<?php 
+                $next_post = get_next_post( $in_same_term = TRUE, $excluded_terms = $excluded_cat_id );
+                echo esc_url( get_permalink( $next_post->ID ) ); 
+                ?>"> 
+                    Next Post
+                </a>
     </div>
 
 <?php
@@ -38,19 +62,35 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
     else {
 ?>
        
-        <div class="col s12 offset-m2 m8"">
-            <div class="card">
-                <div class="card-content">
-                    <span class="card-title"><?php the_title(); ?></span>
-                    <p><?php the_content(); ?></p>
-                </div>
-                <div class="card-action">
-                    <span><< <?php previous_post_link(); ?></span>
-                    <span><i class="material-icons left">access_time</i><?php the_date('d.m.Y'); ?></span>
-                    <span>>> <?php next_post_link(); ?></span>
-                </div>
+    <div class="col s12 offset-m2 m8">
+        <div class="card">
+            <div class="card-content">
+                <span class="card-title"><?php the_title(); ?></span>
+                <p><?php the_content();?>
+            </div>
+            <div class="card-action">
+            <!-- <span><i class="material-icons left">access_time</i><?php the_date('d.m.Y'); ?></span> -->
+            <!-- PREVIOUS POST -->
+            <a class="waves-effect waves-light btn" href="
+                <?php 
+                $previous_post = get_previous_post( $in_same_category = TRUE, $excluded_terms = $excluded_cat_id );
+                echo esc_url( get_permalink( $previous_post->ID ) ); 
+                ?>"> 
+                    Previous Post
+                </a>
+                <!-- <span><i class="material-icons left">access_time</i><?php the_date('d.m.Y'); ?></span> -->
+
+            <!-- NEXT POST -->
+                <a class="waves-effect waves-light btn" href="<?php 
+                $next_post = get_next_post( $in_same_term = TRUE, $excluded_terms = $excluded_cat_id );
+                echo esc_url( get_permalink( $next_post->ID ) ); 
+                ?>"> 
+                    Next Post
+                </a>
+
             </div>
         </div>
+    </div>
     
 <?php
 }
