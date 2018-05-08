@@ -82,7 +82,7 @@ if ($category == 'po') {
               <a href="<?php echo home_url(); ?>/contact-fs/"><i class="material-icons">contact_mail</i>Kontakt</a>
             </li>
             <li>
-              <a href="#"><i class="material-icons">get_app</i>Downloads</a>
+              <a class="grey lighten-3 grey-text"><i class="material-icons grey-text">get_app</i>Downloads</a>
             </li>
             <li>
               <a href="<?php echo home_url(); ?>/category/fs-physik/" >
