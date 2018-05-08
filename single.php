@@ -4,15 +4,11 @@ set_query_var( 'view-category', '' );
 set_query_var( 'view-page', 'blog' );
 get_template_part('partials/sidebar');
 get_template_part('partials/navheader');
+
 $po_cat_id = get_cat_id('PhysikOnline');
 $fs_cat_id = get_cat_id('Fachschaft Physik');
 $gen_cat_id = get_cat_id('Uncategorized');
-?>
 
-<main>
-    <div class="row">
-
-<?php
 // excludes any other category than fs or po as current category
 if ( have_posts() ) : while ( have_posts() ) : the_post();
 $categories = get_the_category();
@@ -33,6 +29,33 @@ if ( $current_post_cat == 'PhysikOnline'){
     $excluded_cat_id = array($po_cat_id, $gen_cat_id, get_cat_id('Allgemein'));
 }
 
+$previous_post = get_previous_post( TRUE, $excluded_cat_id );
+$next_post = get_next_post( TRUE, $excluded_cat_id );
+
+if ($previous_post == ''){
+    $previous_post_url = '';
+    $previous_button_class ='disabled';
+} else {
+    $previous_post_url = esc_url( get_permalink( $previous_post->ID ) );
+    $previous_button_class = '';
+}
+
+if ($next_post == '') {
+    $next_post_url = '';
+    $next_button_class = 'disabled';
+} else {
+    $next_post_url = esc_url( get_permalink( $next_post->ID ) );
+    $next_button_class = '';
+}
+
+?>
+
+<main>
+    <div class="row">
+
+<?php
+
+
     if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
 ?>
     
@@ -50,20 +73,13 @@ if ( $current_post_cat == 'PhysikOnline'){
             </div>
         </div>
             <!-- PREVIOUS POST -->
-            <a class="waves-effect waves-light btn" href="
-                <?php 
-                $previous_post = get_previous_post( $in_same_category = TRUE, $excluded_terms = $excluded_cat_id );
-                echo esc_url( get_permalink( $previous_post->ID ) ); 
-                ?>"> 
+            <a class="waves-effect waves-light btn <?php echo $previous_button_class;?>" href="<?php echo $previous_post_url; ?>"> 
                     Previous Post
                 </a>
                 <!-- <span><i class="material-icons left">access_time</i><?php the_date('d.m.Y'); ?></span> -->
 
             <!-- NEXT POST -->
-                <a class="waves-effect waves-light btn" href="<?php 
-                $next_post = get_next_post( $in_same_term = TRUE, $excluded_terms = $excluded_cat_id );
-                echo esc_url( get_permalink( $next_post->ID ) ); 
-                ?>"> 
+                <a class="waves-effect waves-light btn <?php echo $next_button_class;?>" href="<?php echo $next_post_url; ?>"> 
                     Next Post
                 </a>
     </div>
@@ -82,20 +98,13 @@ if ( $current_post_cat == 'PhysikOnline'){
             <div class="card-action">
             <!-- <span><i class="material-icons left">access_time</i><?php the_date('d.m.Y'); ?></span> -->
             <!-- PREVIOUS POST -->
-            <a class="waves-effect waves-light btn" href="
-                <?php 
-                $previous_post = get_previous_post( $in_same_category = TRUE, $excluded_terms = $excluded_cat_id );
-                echo esc_url( get_permalink( $previous_post->ID ) ); 
-                ?>"> 
+            <a class="waves-effect waves-light btn <?php echo $previous_button_class;?>" href="<?php echo $previous_post_url; ?>"> 
                     Previous Post
                 </a>
                 <!-- <span><i class="material-icons left">access_time</i><?php the_date('d.m.Y'); ?></span> -->
 
             <!-- NEXT POST -->
-                <a class="waves-effect waves-light btn" href="<?php 
-                $next_post = get_next_post( $in_same_term = TRUE, $excluded_terms = $excluded_cat_id );
-                echo esc_url( get_permalink( $next_post->ID ) ); 
-                ?>"> 
+                <a class="waves-effect waves-light btn <?php echo $next_button_class;?>" href="<?php echo $next_post_url; ?>"> 
                     Next Post
                 </a>
 
