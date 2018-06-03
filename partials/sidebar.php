@@ -74,13 +74,31 @@ if ($category == 'po') {
 
 ?>
 <div id="slide-out" class="<?php echo $theme_color; ?> collection side-nav fixed with-header">
-  <a href="<?php echo $home_url ?>" class="collection-header"><h5>
+  <a href="<?php echo $home_url ?>" class="collection-header">
+  
+  <!-- <h5>
   <?php
+// if ($category == 'fs') {
+//     echo '<img style="vertical-align: middle; margin-right: 20px;" src="' . get_template_directory_uri() . '/assets/images/prof.gif">';
+// }
+// echo $title;
+// ?></h5> -->
+
+<div class="row">
+<div class="col s3">
+<?php
 if ($category == 'fs') {
-    echo '<img style="vertical-align: middle; margin-right: 20px;" src="' . get_template_directory_uri() . '/assets/images/prof.gif">';
-}
-echo $title;
-?></h5></a>
+  echo '<img style="vertical-align: middle;" src="' . get_template_directory_uri() . '/assets/images/prof.gif">';
+} else {
+  echo '<img style="vertical-align: middle;" src="' . get_template_directory_uri() . '/assets/images/Logo_po_klein.png">';
+}?>
+</div>
+<div class="col offset-s1 s8" style="padding-top: 1rem;">
+<h5> <?php echo $title;?> </h5>
+</div>
+</div>
+
+</a>
   <ul class="collapsible" data-collapsible="accordion">
     <li>
       <a href="<?php echo home_url(); ?>" class="collapsible-header white-text <?php echo $is_index_active; ?>">
