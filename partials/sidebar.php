@@ -171,13 +171,13 @@ if ($category == 'fs') {
       <div class="collapsible-body">
         <span>
         <ul class="collapsible" data-collapsible="accordion">
-            <li>
+            <li class="<?php echo when_given($po_home); ?>">
               <a href= "<?php echo home_url(); ?>/po-home/" ><i class="material-icons">home</i>Übersicht</a>
             </li>
-            <li>
+            <li class="<?php echo when_given($projekte); ?>">
               <a href="<?php echo home_url(); ?>/projekte"><i class="material-icons">explore</i>Projekte</a>
             </li>
-          <li>
+          <li class="<?php echo when_given($po_blog); ?>">
             <a href="<?php echo home_url(); ?>/category/physikonline" >
               <i class="material-icons left">class</i>Blog
             </a>
