@@ -1,12 +1,12 @@
-<?php 
+<?php
 get_header();
-set_query_var( 'view-category', 'index' );
-set_query_var( 'view-page', 'blog' );
+set_query_var('view-category', 'index');
+set_query_var('view-page', 'blog');
 get_template_part('partials/sidebar');
 get_template_part('partials/navheader');
 ?>
 
- <!--MAIN-->       
+ <!--MAIN-->
 <main>
 <div class="row">
     <div class="col s12 offset-m1 m10">
@@ -20,7 +20,7 @@ get_template_part('partials/navheader');
             <a href="<?php echo home_url(); ?>/fs-home/">
                 <div class="center">
                     <i class="material-icons large yellow-text text-darken-4">weekend</i>
-                    <p class="flow-text">Zum Fachschaftsbereich</p>
+                    <p class="flow-text">Zur Fachschaft</p>
                 </div>
             </a>
         </div>
@@ -37,4 +37,4 @@ get_template_part('partials/navheader');
 
 </main>
 
-<?php get_footer(); ?>
+<?php get_footer();?>
