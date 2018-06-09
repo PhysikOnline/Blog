@@ -41,6 +41,7 @@ if ($category == 'po') {
 
 
 ?>
+<?php if($category == 'po') { ?>
 <nav>
   <div class="nav-wrapper">
   <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
@@ -62,3 +63,11 @@ if ($category == 'po') {
     </ul>
   </div>
 </nav>
+<?php } else { ?>
+<nav>
+  <div class="nav-wrapper">
+  <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+    </ul>
+  </div>
+</nav>
+<?php } ?>

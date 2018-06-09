@@ -161,6 +161,7 @@ footer.page-footer {
   &.page-footer .footer-copyright {
     color: $third-color;
     background-color: transparent;
+    margin-bottom: 0;
   }
 }
 
@@ -172,6 +173,7 @@ footer.page-footer {
 
 main {
   padding: 30px 30px 30px 330px;
+  min-height: 76.7vh;
 }
 
 @media only screen and (max-width: 992px) {

@@ -28,13 +28,17 @@ if ($url == home_url() . '/fs-home') {
   $linksammlung = 'grey lighten-3';
 } elseif ($url == home_url() . '/faq') {
   $faq = 'grey lighten-3';
+} elseif ($url == home_url() . '/altklausuren') {
+  $altklausuren = 'grey lighten-3';
 } elseif ($url == home_url() . '/phifa') {
   $phifa = 'grey lighten-3';
 } elseif ($url == home_url() . '/eev') {
   $eev = 'grey lighten-3';
 } elseif ($url == home_url() . '/hsk') {
   $hsk = 'grey lighten-3';
-} elseif ($url == home_url() . '/po-home') {
+} 
+
+elseif ($url == home_url() . '/po-home') {
   $po_home = 'active';
 } elseif ($url == home_url() . '/projekte') {
   $projekte = 'active';
@@ -76,13 +80,6 @@ if ($category == 'po') {
 <div id="slide-out" class="<?php echo $theme_color; ?> collection side-nav fixed with-header">
   <a href="<?php echo $home_url ?>" class="collection-header">
   
-  <!-- <h5>
-  <?php
-// if ($category == 'fs') {
-//     echo '<img style="vertical-align: middle; margin-right: 20px;" src="' . get_template_directory_uri() . '/assets/images/prof.gif">';
-// }
-// echo $title;
-// ?></h5> -->
 
 <div class="row">
 <div class="col s3">
@@ -113,6 +110,8 @@ if ($category == 'fs') {
       <div class="collapsible-body">
         <span>
           <ul class="sub-collapsible collapsible" data-collapsible="accordion">
+
+          <!-- INFORMATIONEN -->
             <li>
               <div class="collapsible-header collection-item sublist-padding">
               <i class="material-icons">info</i>Informationen
@@ -123,11 +122,14 @@ if ($category == 'fs') {
                   <li class="<?php echo when_given($erstsemester); ?>"><a href="<?php echo home_url(); ?>/erstsemester/"><i class="material-icons">face</i>Erstsemester</a></li>
                   <li class="<?php echo when_given($schuler); ?>"><a href="<?php echo home_url(); ?>/schuler/"><i class="material-icons">child_care</i>Schüler</a></li>
                   <li class="<?php echo when_given($studiengang); ?>"><a href="<?php echo home_url(); ?>/studiengang/"><i class="material-icons">book</i>Studiengang</a></li>
-                  <li class="<?php echo when_given($linksammlung); ?>"><a href="<?php echo home_url(); ?>/linksammlung/"><i class="material-icons">link</i>Linksammlung</a></li>
-                  <li class="<?php echo when_given($faq); ?>"><a href="<?php echo home_url(); ?>/faq/"><i class="material-icons">help</i>FAQ</a></li>
+                  <li class="<?php echo when_given($linksammlung); ?>"><a href="<?php echo home_url(); ?>/linksammlung/"><i class="material-icons">link</i>Weiterführende Links</a></li>
+                  <li class="<?php echo when_given($faq); ?>"><a href="<?php echo home_url(); ?>/altklausuren/"><i class="material-icons">description</i>Altklausuren</a></li>
                 </ul>
               </div>
             </li>
+          <!-- / -->
+
+          <!-- VERANSTALTUNGEN -->
             <li>
               <div class="collapsible-header collection-item sublist-padding">
                 <i class="material-icons">event</i>Veranstaltungen
@@ -141,11 +143,13 @@ if ($category == 'fs') {
                 </ul>
               </div>
             </li>
+          <!-- / -->
+
             <li class="<?php echo when_given($fs_home); ?>">
               <a href= "<?php echo home_url(); ?>/fs-home/" ><i class="material-icons">home</i>Übersicht</a>
             </li>
             <li class="<?php echo when_given($fs_about); ?>">
-              <a href= "<?php echo home_url(); ?>/about-fs/" ><i class="material-icons">people</i>About</a>
+              <a href= "<?php echo home_url(); ?>/about-fs/" ><i class="material-icons">people</i>Über Uns</a>
             </li>
             <li class="<?php echo when_given($fs_contact); ?>">
               <a href="<?php echo home_url(); ?>/contact-fs/"><i class="material-icons">contact_mail</i>Kontakt</a>
@@ -155,7 +159,7 @@ if ($category == 'fs') {
             </li>
             <li class="<?php echo when_given($fs_blog); ?>">
               <a href="<?php echo home_url(); ?>/category/fs-physik/" >
-                <i class="material-icons left">class</i>Blog
+                <i class="material-icons left">class</i>Aktuelles
               </a>
             </li>
           </ul>
