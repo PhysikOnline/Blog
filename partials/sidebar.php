@@ -10,33 +10,59 @@ function when_given($link) {
   }
 }
 
+// FS Main
 if ($url == home_url() . '/fs-home') {
   $fs_home = 'active';
 } elseif ($url == home_url() . '/about-fs') {
   $fs_about = 'active';
 } elseif ($url == home_url() . '/contact-fs') {
   $fs_contact = 'active';
-} elseif ($url == home_url() . '/erstsemester') {
+} elseif ($url == home_url() . '/campusuebersicht') {
+  $campusuebersicht = 'active';
+} elseif ($url == home_url() . '/category/fs-physik') {
+  $fs_blog = 'active';
+}
+// FS Info
+  elseif ($url == home_url() . '/erstsemester') {
   $erstsemester = 'grey lighten-3';
+  $info = 'active';
 } elseif ($url == home_url() . '/schuler') {
   $schuler = 'grey lighten-3';
-} elseif ($url == home_url() . '/category/fs-physik') {
-  $fs_blog = 'grey lighten-3';
+  $info = 'active';
 } elseif ($url == home_url() . '/studiengang') {
   $studiengang = 'grey lighten-3';
-} elseif ($url == home_url() . '/linksammlung') {
-  $linksammlung = 'grey lighten-3';
-} elseif ($url == home_url() . '/faq') {
-  $faq = 'grey lighten-3';
+  $info = 'active';
+} elseif ($url == home_url() . '/anlaufstellen') {
+  $anlaufstellen = 'grey lighten-3';
+  $info = 'active';
 } elseif ($url == home_url() . '/altklausuren') {
   $altklausuren = 'grey lighten-3';
-} elseif ($url == home_url() . '/phifa') {
+  $info = 'active';
+} elseif ($url == home_url() . '/linksammlung') {
+  $linksammlung = 'grey lighten-3';
+  $info = 'active';
+} 
+// elseif ($url == home_url() . '/faq') {
+//   $faq = 'grey lighten-3';
+// } 
+
+// FS Veranstaltungen
+  elseif ($url == home_url() . '/phifa') {
   $phifa = 'grey lighten-3';
+  $veranstaltungen = 'active';
 } elseif ($url == home_url() . '/eev') {
   $eev = 'grey lighten-3';
-} elseif ($url == home_url() . '/hsk') {
-  $hsk = 'grey lighten-3';
-} 
+  $veranstaltungen = 'active';
+} elseif ($url == home_url() . '/campuskino') {
+  $campuskino  = 'grey lighten-3';
+  $veranstaltungen = 'active';
+}  elseif ($url == home_url() . '/sonstiges') {
+  $sonstiges = 'grey lighten-3';
+  $veranstaltungen = 'active';
+} elseif ($url == home_url() . '/kolloq') {
+  $kolloq = 'grey lighten-3';
+  $veranstaltungen = 'active';
+}
 
 elseif ($url == home_url() . '/po-home') {
   $po_home = 'active';
@@ -112,34 +138,37 @@ if ($category == 'fs') {
           <ul class="sub-collapsible collapsible" data-collapsible="accordion">
 
           <!-- INFORMATIONEN -->
-            <li>
-              <div class="collapsible-header collection-item sublist-padding">
+            <li class="<?php echo $info;?>">
+              <div class="collapsible-header collection-item sublist-padding <?php echo $info;?> ">
               <i class="material-icons">info</i>Informationen
               <a href="#" class="secondary-content" style="padding-left: 44.5px;"><i class="material-icons">keyboard_arrow_down</i></a>
               </div>
               <div class="collapsible-body" style="margin-left: 20px;">
                 <ul>
-                  <li class="<?php echo when_given($erstsemester); ?>"><a href="<?php echo home_url(); ?>/erstsemester/"><i class="material-icons">face</i>Erstsemester</a></li>
-                  <li class="<?php echo when_given($schuler); ?>"><a href="<?php echo home_url(); ?>/schuler/"><i class="material-icons">child_care</i>Schüler</a></li>
-                  <li class="<?php echo when_given($studiengang); ?>"><a href="<?php echo home_url(); ?>/studiengang/"><i class="material-icons">book</i>Studiengang</a></li>
-                  <li class="<?php echo when_given($linksammlung); ?>"><a href="<?php echo home_url(); ?>/linksammlung/"><i class="material-icons">link</i>Weiterführende Links</a></li>
-                  <li class="<?php echo when_given($faq); ?>"><a href="<?php echo home_url(); ?>/altklausuren/"><i class="material-icons">description</i>Altklausuren</a></li>
+                  <li class="<?php echo $erstsemester; ?>"><a href="<?php echo home_url(); ?>/erstsemester/"><i class="material-icons">face</i>Erstsemester</a></li>
+                  <li class="<?php echo $schuler; ?>"><a href="<?php echo home_url(); ?>/schuler/"><i class="material-icons">child_care</i>Schüler</a></li>
+                  <li class="<?php echo $studiengang; ?>"><a href="<?php echo home_url(); ?>/studiengang/"><i class="material-icons">book</i>Studiengang</a></li>
+                  <li class="<?php echo $anlaufstellen; ?>"><a href="<?php echo home_url(); ?>/anlaufstellen/"><i class="material-icons">ring_volume</i>Anlaufstellen</a></li>
+                  <li class="<?php echo $altklausuren; ?>"><a href="<?php echo home_url(); ?>/altklausuren/"><i class="material-icons">description</i>Altklausuren</a></li>
+                  <li class="<?php echo $linksammlung; ?>"><a href="<?php echo home_url(); ?>/linksammlung/"><i class="material-icons">link</i>Weiterführende Links</a></li>
                 </ul>
               </div>
             </li>
           <!-- / -->
 
           <!-- VERANSTALTUNGEN -->
-            <li>
-              <div class="collapsible-header collection-item sublist-padding">
+            <li class="<?php echo $veranstaltungen; ?>">
+              <div class="collapsible-header collection-item sublist-padding <?php echo $veranstaltungen; ?>">
                 <i class="material-icons">event</i>Veranstaltungen
                 <a href="#" class="secondary-content"><i class="material-icons">keyboard_arrow_down</i></a>
               </div>
               <div class="collapsible-body" style="margin-left: 20px;">
                 <ul>
+                  <li class="<?php echo when_given($eev); ?>"><a href="<?php echo home_url(); ?>/eev"><i class="material-icons">people</i>Erstsemestereinführung</a></li>
+                  <li class="<?php echo when_given($campuskino); ?>"><a href="<?php echo home_url(); ?>/campuskino"><i class="material-icons">local_movies</i>Campuskino</a></li>
+                  <li class="<?php echo when_given($kolloq); ?>"><a href="<?php echo home_url(); ?>/kolloq"><i class="material-icons">school</i>Kolloquium</a></li>
+                  <li class="<?php echo when_given($sonstiges); ?>"><a href="<?php echo home_url(); ?>/sonstiges"><i class="material-icons">whatshot</i>Sonstiges</a></li>
                   <li class="<?php echo when_given($phifa); ?>"><a href="<?php echo home_url(); ?>/phifa"><i class="material-icons">directions_run</i>Phifa</a></li>
-                  <li class="<?php echo when_given($eev); ?>"><a href="<?php echo home_url(); ?>/eev"><i class="material-icons">child_friendly</i>Erstsemestereinführung</a></li>
-                  <li class="<?php echo when_given($hsk); ?>"><a href="<?php echo home_url(); ?>/hsk"><i class="material-icons">local_movies</i>Hörsaalkino (HSK)</a></li>
                 </ul>
               </div>
             </li>
@@ -153,6 +182,9 @@ if ($category == 'fs') {
             </li>
             <li class="<?php echo when_given($fs_contact); ?>">
               <a href="<?php echo home_url(); ?>/contact-fs/"><i class="material-icons">contact_mail</i>Kontakt</a>
+            </li>
+            <li class="<?php echo when_given($campusuebersicht); ?>">
+              <a href="<?php echo home_url(); ?>/campusuebersicht/"><i class="material-icons">map</i>Campusübersicht</a>
             </li>
             <li>
               <a class="grey lighten-5 grey-text text-lighten-1"><i class="material-icons grey-text">get_app</i>Downloads</a>
