@@ -53,13 +53,13 @@ if ($category == 'po') {
       <li><a href="<?php echo $blog_link;?>" class="<?php echo $is_blog_active; ?>">
       <i class="material-icons left hide-on-small-only">class</i>Blog</a>
       </li>
-        <li><a href=<?php echo $about_link;?> class="<?php echo $is_about_us_active; ?>">
-        <i class="material-icons left hide-on-small-only">people</i>Über Uns</a>
-        </li>
-        <li><a href=<?php echo $contact_link;?> class="<?php echo $is_contact_active; ?>">
-        <i class="material-icons left hide-on-small-only">contact_mail</i>Kontakt</a>
-        </li>       
-        <?php endif; ?>
+      <li><a href=<?php echo $about_link;?> class="<?php echo $is_about_us_active; ?>">
+      <i class="material-icons left hide-on-small-only">people</i>Über Uns</a>
+      </li>
+      <li><a href=<?php echo $contact_link;?> class="<?php echo $is_contact_active; ?>">
+      <i class="material-icons left hide-on-small-only">contact_mail</i>Kontakt</a>
+      </li>       
+      <?php endif; ?>
     </ul>
   </div>
 </nav>

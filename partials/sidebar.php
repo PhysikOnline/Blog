@@ -21,6 +21,8 @@ if ($url == home_url() . '/fs-home') {
   $campusuebersicht = 'active';
 } elseif ($url == home_url() . '/category/fs-physik') {
   $fs_blog = 'active';
+} elseif ($url == home_url() . '/faq') {
+  $fs_faq = 'active';
 }
 // FS Info
   elseif ($url == home_url() . '/erstsemester') {
@@ -147,7 +149,7 @@ if ($category == 'fs') {
                 <ul>
                   <li class="<?php echo $erstsemester; ?>"><a href="<?php echo home_url(); ?>/erstsemester/"><i class="material-icons">face</i>Erstsemester</a></li>
                   <li class="<?php echo $schuler; ?>"><a href="<?php echo home_url(); ?>/schuler/"><i class="material-icons">child_care</i>Schüler</a></li>
-                  <li class="<?php echo $studiengang; ?>"><a href="<?php echo home_url(); ?>/studiengang/"><i class="material-icons">book</i>Studiengang</a></li>
+                  <li class="<?php echo $studiengang; ?>"><a href="<?php echo home_url(); ?>/studiengang/"><i class="material-icons">import_contacts</i>Studiengang</a></li>
                   <li class="<?php echo $anlaufstellen; ?>"><a href="<?php echo home_url(); ?>/anlaufstellen/"><i class="material-icons">ring_volume</i>Anlaufstellen</a></li>
                   <li class="<?php echo $altklausuren; ?>"><a href="<?php echo home_url(); ?>/altklausuren/"><i class="material-icons">description</i>Altklausuren</a></li>
                   <li class="<?php echo $linksammlung; ?>"><a href="<?php echo home_url(); ?>/linksammlung/"><i class="material-icons">link</i>Weiterführende Links</a></li>
@@ -179,6 +181,9 @@ if ($category == 'fs') {
             </li>
             <li class="<?php echo when_given($fs_about); ?>">
               <a href= "<?php echo home_url(); ?>/about-fs/" ><i class="material-icons">people</i>Über Uns</a>
+            </li>
+            <li class="<?php echo when_given($fs_faq); ?>">
+              <a href="<?php echo home_url(); ?>/faq/"><i class="material-icons">info</i>FAQ</a>
             </li>
             <li class="<?php echo when_given($fs_contact); ?>">
               <a href="<?php echo home_url(); ?>/contact-fs/"><i class="material-icons">contact_mail</i>Kontakt</a>
